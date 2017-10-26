@@ -1,0 +1,53 @@
+.reviews {
+  width: 100%;
+  min-width: 1100px;
+  min-height: 650px;
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+
+.reviews-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 1100px; }
+
+.reviews-list__item {
+  width: 25%;
+  height: 50vh;
+  position: relative; }
+  .reviews-list__item:hover > .reviews-list__item-overlay {
+    display: flex; }
+  .reviews-list__item .reviews-list__item-image {
+    filter: grayscale(100); }
+
+.reviews-list__item-overlay {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  padding: 0 45px;
+  display: none; }
+
+.reviews-list__item-name {
+  font: 14px Gagalin-Regular;
+  color: white;
+  margin-bottom: 15px; }
+
+.reviews-list__item-text {
+  font: 300 14px/24px  Ubuntu-Light;
+  color: white; }
+
+.reviews-list__item-btn {
+  width: 113px;
+  height: 37px; }
+  .reviews-list__item-btn:hover {
+    background: #1f2122; }
