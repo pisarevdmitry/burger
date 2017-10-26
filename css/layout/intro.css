@@ -14,9 +14,15 @@
   margin: 15vh 93px; }
 
 .intro__preview-image {
-  background: url("../img/svg/drops.svg") 0 28px no-repeat, url("../img/png/burger.png") 31px -45px no-repeat;
+  background: url("../img/svg/drops.svg") 0 28px no-repeat;
+  display: flex;
+  justify-content: center;
   width: 451px;
-  height: 424px; }
+  height: 424px;
+  padding-bottom: 91px; }
+
+.intro__preview-picture {
+  align-self: center; }
 
 .intro__preview-text {
   display: flex;

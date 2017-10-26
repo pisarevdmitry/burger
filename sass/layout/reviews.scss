@@ -1,5 +1,4 @@
 
-
 .reviews{
   width: 100%;
   min-width:1100px ;
@@ -17,18 +16,20 @@
   flex-flow: row wrap;
   min-width: 1100px;
 }
-.reviews-list__item{
+.reviews__item{
   width: 25%;
   height: 50vh;
   position: relative;
-  &:hover > .reviews-list__item-overlay{
+  &:hover > .reviews__overlay{
     display: flex;
 }
-.reviews-list__item-image{
+.reviews__image{
   filter: grayscale(100);
+  width: 100%;
+  height: 100%;
   }
 }
-.reviews-list__item-overlay{
+.reviews__overlay{
   position: absolute;
   flex-direction: column;
   justify-content: center;
@@ -42,16 +43,16 @@
   padding: 0 45px;
   display: none;
 }
-.reviews-list__item-name{
+.reviews__name{
   font: 14px Gagalin-Regular ;
   color: white;
   margin-bottom: 15px;
   }
-.reviews-list__item-text{
+.reviews__text{
   font: 300 14px/24px  Ubuntu-Light;
   color: white;
   }
-.reviews-list__item-btn{
+.reviews__link{
   width: 113px;
   height: 37px;
   &:hover {
