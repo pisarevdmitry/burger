@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 80px;
+  align-items: center;
+  padding-top: 2vh; }
+
+.header__logo {
+  margin-right: 210px;
+  width: 93px;
+  height: 68px; }
+
+.header__into-text {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin-left: 10px; }
+
+.header__arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px; }
