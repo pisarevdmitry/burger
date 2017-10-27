@@ -1,0 +1,29 @@
+.controls {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 13vh;
+  right: 4%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1000; }
+
+.controls__item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative; }
+  .controls__item:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%); }
+  .controls__item:hover {
+    border: 1px solid white;
+    cursor: pointer; }
