@@ -1,18 +1,13 @@
 .btn {
-  display: flex;
   border-radius: 5px;
-  justify-content: center;
-  align-items: center;
   font: 500 13px Ubuntu-Medium;
-  font-size: 13px;
   color: white;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 10px 15px; }
 
 .btn_red {
-  background: #e45028;
-  width: 97px;
-  height: 37px; }
+  background: #e45028; }
   .btn_red:hover {
     background: #c1401e; }
 

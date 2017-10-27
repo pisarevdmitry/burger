@@ -406,19 +406,18 @@ template {
   font-style: normal; }
 
 .intro {
-  width: 100%;
   min-width: 1100px;
   min-height: 650px;
   height: 100vh;
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
-  background-size: auto, cover;
-  margin-bottom: 0; }
+  background-size: auto, cover; }
 
 .intro__preview {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 15vh 93px; }
+  justify-content: center;
+  padding-top: 15vh; }
 
 .intro__preview-image {
   background: url("../img/svg/drops.svg") 0 28px no-repeat;
@@ -447,16 +446,15 @@ template {
   font: 65px/60px Lifehack-Medium;
   color: white; }
 
-.logo {
+.logo__image {
   width: 100%;
   height: 100%; }
 
 .arrow {
-  position: fixed;
-  bottom: 5vh;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000; }
+  bottom: 5%; }
 
 .header {
   display: flex;
@@ -467,7 +465,7 @@ template {
   padding-top: 2vh; }
 
 .header__logo {
-  margin-right: 210px;
+  margin-right: 20%;
   width: 93px;
   height: 68px; }
 
@@ -517,20 +515,15 @@ template {
   text-decoration: none; }
 
 .btn {
-  display: flex;
   border-radius: 5px;
-  justify-content: center;
-  align-items: center;
   font: 500 13px Ubuntu-Medium;
-  font-size: 13px;
   color: white;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 10px 15px; }
 
 .btn_red {
-  background: #e45028;
-  width: 97px;
-  height: 37px; }
+  background: #e45028; }
   .btn_red:hover {
     background: #c1401e; }
 
@@ -538,7 +531,6 @@ template {
   background: #2f3234; }
 
 .advantages {
-  width: 100%;
   min-width: 1100px;
   min-height: 650px;
   height: 100vh;
@@ -554,17 +546,12 @@ template {
   padding-top: 20vh; }
 
 .advantages-list {
-  margin: 0 85px;
   padding: 0;
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  margin-top: 13vh; }
+  display: flex; }
 
 .advantages__item {
-  width: 33.3%;
   display: flex;
+  flex: 1 0 0;
   flex-direction: column;
   align-items: center; }
 
@@ -576,14 +563,12 @@ template {
   font: 24px/28px Lifehack-Medium;
   color: #2f3234;
   text-align: center;
-  width: 220px;
   margin-bottom: 20px; }
 
 .advantages__text {
   font: 300 14px Ubuntu-Light;
   color: rgba(47, 50, 52, 0.8);
   text-align: center;
-  width: 285px;
   margin: 0; }
 
 .advantages__picture {
@@ -591,7 +576,6 @@ template {
   height: 100%; }
 
 .reviews {
-  width: 100%;
   min-width: 1100px;
   min-height: 650px;
   height: 100vh;
@@ -607,29 +591,30 @@ template {
   min-width: 1100px; }
 
 .reviews__item {
-  width: 25%;
+  flex: 1 0 25%;
   height: 50vh;
   position: relative; }
   .reviews__item:hover > .reviews__overlay {
-    display: flex; }
-  .reviews__item .reviews__image {
-    filter: grayscale(100);
-    width: 100%;
-    height: 100%; }
+    visibility: visible;
+    opacity: 1; }
+
+.reviews__image {
+  filter: grayscale(100);
+  width: 100%;
+  height: 100%; }
 
 .reviews__overlay {
   position: absolute;
-  flex-direction: column;
-  justify-content: center;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
   width: 100%;
+  padding: 35% 7%;
   background: rgba(20, 20, 20, 0.6);
-  padding: 0 45px;
-  display: none; }
+  opacity: 0;
+  visibility: hidden; }
 
 .reviews__name {
   font: 14px Gagalin-Regular;
@@ -637,14 +622,11 @@ template {
   margin-bottom: 15px; }
 
 .reviews__text {
-  font: 300 14px/24px  Ubuntu-Light;
+  font: 300 14px/24px Ubuntu-Light;
   color: white; }
 
-.reviews__link {
-  width: 113px;
-  height: 37px; }
-  .reviews__link:hover {
-    background: #1f2122; }
+.reviews__link:hover {
+  background: #1f2122; }
 
 .controls {
   position: fixed;

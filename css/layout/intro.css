@@ -1,17 +1,16 @@
 .intro {
-  width: 100%;
   min-width: 1100px;
   min-height: 650px;
   height: 100vh;
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
-  background-size: auto, cover;
-  margin-bottom: 0; }
+  background-size: auto, cover; }
 
 .intro__preview {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 15vh 93px; }
+  justify-content: center;
+  padding-top: 15vh; }
 
 .intro__preview-image {
   background: url("../img/svg/drops.svg") 0 28px no-repeat;

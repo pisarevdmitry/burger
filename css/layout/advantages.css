@@ -1,5 +1,4 @@
 .advantages {
-  width: 100%;
   min-width: 1100px;
   min-height: 650px;
   height: 100vh;
@@ -15,17 +14,12 @@
   padding-top: 20vh; }
 
 .advantages-list {
-  margin: 0 85px;
   padding: 0;
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  margin-top: 13vh; }
+  display: flex; }
 
 .advantages__item {
-  width: 33.3%;
   display: flex;
+  flex: 1 0 0;
   flex-direction: column;
   align-items: center; }
 
@@ -37,14 +31,12 @@
   font: 24px/28px Lifehack-Medium;
   color: #2f3234;
   text-align: center;
-  width: 220px;
   margin-bottom: 20px; }
 
 .advantages__text {
   font: 300 14px Ubuntu-Light;
   color: rgba(47, 50, 52, 0.8);
   text-align: center;
-  width: 285px;
   margin: 0; }
 
 .advantages__picture {
