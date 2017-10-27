@@ -1,0 +1,15 @@
+.btn {
+  border-radius: 5px;
+  font: 500 13px Ubuntu-Medium;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 15px; }
+
+.btn_red {
+  background: #e45028; }
+  .btn_red:hover {
+    background: #c1401e; }
+
+.btn_gray {
+  background: #2f3234; }
