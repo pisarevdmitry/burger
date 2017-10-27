@@ -1,8 +1,6 @@
 .arrow {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5%; }
+  text-align: center;
+  margin-top: 50px; }
 
 .arrow__link {
   width: 27px;
