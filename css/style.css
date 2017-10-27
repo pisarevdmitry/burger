@@ -469,7 +469,6 @@ template {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 0 80px;
   align-items: center;
   padding-top: 2vh; }
 
