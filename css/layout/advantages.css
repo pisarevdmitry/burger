@@ -4,14 +4,15 @@
   height: 100vh;
   background: url("../img/jpg/bg.jpg") no-repeat;
   background-size: cover;
-  margin-top: 0; }
+  display: flex;
+  align-items: center; }
 
 .advantages__header {
   font: bold 72px Gagalin-Regular;
   text-align: center;
   color: #2f3234;
   margin: 0;
-  padding-top: 20vh; }
+  padding-top: 12vh; }
 
 .advantages-list {
   padding: 0;

@@ -5,16 +5,14 @@
   margin: 0;
   color: white;
   text-transform: uppercase;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center; }
+  display: flex; }
 
 .nav__item {
   position: relative;
   margin-right: 33px; }
   .nav__item:last-child:after {
-    display: none; }
+    display: none;
+    margin-right: 0; }
 
 .nav__item:after {
   position: absolute;
@@ -22,10 +20,9 @@
   width: 4px;
   height: 4px;
   top: 50%;
-  right: 0;
+  right: -16px;
   border-radius: 50%;
   background: white;
-  margin-right: -16.5px;
   transform: translateY(-50%); }
 
 .nav__link {

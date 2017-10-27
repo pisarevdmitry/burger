@@ -3,3 +3,12 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 5%; }
+
+.arrow__link {
+  width: 27px;
+  height: 14px;
+  display: inline-block; }
+
+.arrow__image {
+  width: 100%;
+  height: 100%; }

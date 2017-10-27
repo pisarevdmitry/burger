@@ -456,6 +456,15 @@ template {
   transform: translateX(-50%);
   bottom: 5%; }
 
+.arrow__link {
+  width: 27px;
+  height: 14px;
+  display: inline-block; }
+
+.arrow__image {
+  width: 100%;
+  height: 100%; }
+
 .header {
   display: flex;
   flex-flow: row nowrap;
@@ -465,7 +474,7 @@ template {
   padding-top: 2vh; }
 
 .header__logo {
-  margin-right: 20%;
+  margin-right: 200px;
   width: 93px;
   height: 68px; }
 
@@ -487,16 +496,14 @@ template {
   margin: 0;
   color: white;
   text-transform: uppercase;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center; }
+  display: flex; }
 
 .nav__item {
   position: relative;
   margin-right: 33px; }
   .nav__item:last-child:after {
-    display: none; }
+    display: none;
+    margin-right: 0; }
 
 .nav__item:after {
   position: absolute;
@@ -504,10 +511,9 @@ template {
   width: 4px;
   height: 4px;
   top: 50%;
-  right: 0;
+  right: -16px;
   border-radius: 50%;
   background: white;
-  margin-right: -16.5px;
   transform: translateY(-50%); }
 
 .nav__link {
@@ -536,14 +542,15 @@ template {
   height: 100vh;
   background: url("../img/jpg/bg.jpg") no-repeat;
   background-size: cover;
-  margin-top: 0; }
+  display: flex;
+  align-items: center; }
 
 .advantages__header {
   font: bold 72px Gagalin-Regular;
   text-align: center;
   color: #2f3234;
   margin: 0;
-  padding-top: 20vh; }
+  padding-top: 12vh; }
 
 .advantages-list {
   padding: 0;
@@ -578,9 +585,7 @@ template {
 .reviews {
   min-width: 1100px;
   min-height: 650px;
-  height: 100vh;
-  margin: 0;
-  padding: 0; }
+  height: 100vh; }
 
 .reviews-list {
   margin: 0;
@@ -611,7 +616,7 @@ template {
   right: 0;
   height: 100%;
   width: 100%;
-  padding: 35% 7%;
+  padding: 100px 29px;
   background: rgba(20, 20, 20, 0.6);
   opacity: 0;
   visibility: hidden; }
@@ -668,5 +673,4 @@ body {
 
 .container {
   max-width: 1100px;
-  margin: 0 auto;
-  height: 100%; }
+  margin: 0 auto; }
