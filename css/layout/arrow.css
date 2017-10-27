@@ -1,0 +1,12 @@
+.arrow {
+  text-align: center;
+  margin-top: 50px; }
+
+.arrow__link {
+  width: 27px;
+  height: 14px;
+  display: inline-block; }
+
+.arrow__image {
+  width: 100%;
+  height: 100%; }
