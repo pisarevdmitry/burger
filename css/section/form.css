@@ -1,0 +1,61 @@
+.form {
+  background: url("../img/jpg/form.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center; }
+
+.form__header {
+  font: bold 72px Gagalin-Regular;
+  text-align: center;
+  color: #f9b43b;
+  margin: 0;
+  margin-bottom: 75px; }
+
+.form-delivery {
+  display: flex; }
+
+.form__main-info {
+  flex: 0 0 50%;
+  margin-right: 20px; }
+
+.form__additional-info {
+  flex: 0 0 50%; }
+
+.form__row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 15px; }
+
+.form__column {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px; }
+  .form__column:last-child {
+    margin-right: 0; }
+  .form__column-row {
+    flex: 0 0 auto;
+    flex-direction: row; }
+
+.form__label {
+  font: 300 14px Ubuntu-Light;
+  color: white;
+  margin-bottom: 7px; }
+
+.form__input {
+  height: 35px;
+  border: 2px solid transparent;
+  border-radius: 6px; }
+  .form__input:focus {
+    border: 2px solid #f9b43b;
+    outline: none; }
+
+.form__texarea {
+  height: 108px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  resize: none; }
+  .form__texarea:focus {
+    border: 2px solid #f9b43b;
+    outline: none; }

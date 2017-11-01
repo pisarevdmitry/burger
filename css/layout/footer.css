@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 0;
+  background: url("../img/jpg/texture.jpg"); }
+
+.footer__conteiner {
+  display: flex;
+  height: 100%; }
+
+.footer__column {
+  flex: 1 0 0; }
