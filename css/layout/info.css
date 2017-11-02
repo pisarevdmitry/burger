@@ -5,7 +5,7 @@
 
 .info__adress {
   display: block;
-  font: 300 14px Ubuntu-Light;
+  font: 300 rem(14) Ubuntu-Light;
   color: white; }
 
 .info__phone-image {
@@ -14,5 +14,12 @@
   fill: #e45028; }
 
 .info__phone-number {
-  font: bold 14px Ubuntu-Bold;
+  font: bold rem(14) Ubuntu-Bold;
   color: #e45028; }
+
+@media (max-width: 480px) {
+  .info__adress {
+    text-align: center;
+    margin-bottom: rem(5); }
+  .info__phone {
+    text-align: center; } }

@@ -12,3 +12,8 @@
 
 .footer__column {
   flex: 1 0 0; }
+
+@media (max-width: 480px) {
+  .footer__conteiner {
+    flex-direction: column;
+    justify-content: center; } }

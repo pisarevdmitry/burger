@@ -1,6 +1,6 @@
 .arrow {
   text-align: center;
-  margin-top: 50px; }
+  margin-top: rem(50); }
 
 .arrow__link {
   width: 27px;

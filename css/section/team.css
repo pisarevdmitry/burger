@@ -11,44 +11,43 @@
   background: rgba(47, 50, 52, 0.92);
   display: flex;
   justify-content: center;
-  align-items: center; }
+  padding-top: rem(70); }
 
 .team {
   width: 75%; }
 
 .team__header {
   color: #f9b43b;
-  font: bold 72px Gagalin-Regular;
+  font: bold rem(72) Gagalin-Regular;
   margin: 0; }
 
 .team-accordion {
   margin: 0;
-  margin-top: 70px;
+  margin-top: rem(70);
   padding: 0;
   list-style-type: none; }
 
 .team-accordion__item {
-  margin-bottom: 20px; }
+  margin-bottom: rem(20); }
 
 .team-accordion__title {
-  font: 12px Gagalin-Regular;
+  font: rem(12) Gagalin-Regular;
   color: white;
-  position: relative;
-  padding-left: 20px; }
+  display: flex;
+  align-items: center;
+  position: relative; }
   .team-accordion__title:before {
-    position: absolute;
     content: "";
-    border: 7px solid transparent;
-    border-top: 10px solid #f9b43b;
-    left: 0;
-    top: 50%;
-    transform: translateY(-25%); }
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom-width: 0;
+    margin-right: rem(5); }
   .team-accordion__title-active {
     color: #f9b43b; }
     .team-accordion__title-active:before {
-      border-top: transparent;
-      border-bottom: 10px solid #f9b43b;
-      transform: translateY(-50%); }
+      transform: rotate(180deg); }
     .team-accordion__title-active + .team-accordion__decription {
       height: auto; }
 
@@ -56,7 +55,10 @@
   display: flex;
   flex-flow: row nowrap;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: rem(14);
+  margin-left: rem(8);
+  margin-bottom: rem(25); }
 
 .team__image {
   flex: 0 0 100px;
@@ -66,14 +68,14 @@
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 20px; }
+  margin-right: rem(20); }
 
 .team__picture {
   width: 130px;
   height: 100px; }
 
 .team__decription {
-  font-size: 14px;
+  font-size: rem(14);
   color: white; }
 
 .team__position {
@@ -81,4 +83,29 @@
 
 .team__text {
   font-family: Ubuntu-Light;
-  line-height: 24px; }
+  line-height: rem(24); }
+
+@media (max-width: 768px) {
+  .team__overlay {
+    width: 100%; }
+  .team {
+    width: 50%;
+    text-align: center; }
+  .team-accordion__decription {
+    flex-direction: column;
+    align-items: center; }
+  .team-accordion__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0; }
+  .team__image {
+    margin-bottom: rem(15); }
+  .team-accordion__title {
+    font-size: rem(25); } }
+
+@media (max-width: 480px) {
+  .team__header {
+    font-size: rem(50); }
+  .team {
+    width: 75%; } }

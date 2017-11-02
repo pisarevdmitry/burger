@@ -3,14 +3,14 @@
   background-size: cover;
   background-position: center center;
   position: relative;
-  padding-top: 60px; }
+  padding-top: rem(60); }
 
 .menu__header {
-  font: bold 72px Gagalin-Regular;
+  font: bold rem(72) Gagalin-Regular;
   margin: 0;
   text-transform: uppercase;
   color: white;
-  letter-spacing: 6px; }
+  letter-spacing: rem(6); }
 
 .menu-accordion {
   position: absolute;
@@ -36,20 +36,24 @@
   width: 80px; }
   .menu-accordion__link-active + .menu-accordion__decription {
     width: 500px;
-    padding: 60px 30px; }
+    padding: rem(60) rem(30); }
 
 .menu-accordion__title {
   display: inline-block;
-  font: bold 40px Gagalin-Regular;
+  font: bold rem(40) Gagalin-Regular;
   color: white;
   position: absolute;
   white-space: nowrap;
   top: 50%;
   left: 0;
-  transform: rotate(-90deg) translateY(-50%); }
+  transform: rotate(-90deg) translateY(-192%); }
+  .menu-accordion__title_veg {
+    line-height: rem(56); }
+  .menu-accordion__title_diet {
+    line-height: rem(43); }
 
 .menu-accordion__decription {
-  font: 300 14px/24px Ubuntu-Light;
+  font: 300 rem(14)/rem(24) Ubuntu-Light;
   color: white;
   width: 0;
   overflow: hidden;

@@ -6,7 +6,7 @@
   padding-top: 2vh; }
 
 .header__logo {
-  margin-right: 200px;
+  margin-right: rem(200);
   width: 93px;
   height: 68px; }
 
@@ -14,9 +14,9 @@
   display: flex;
   flex-direction: column;
   width: 450px;
-  margin-left: 10px; }
+  margin-left: rem(10); }
 
 .header__arrow {
   display: flex;
   justify-content: center;
-  margin-top: 200px; }
+  margin-top: rem(200); }
