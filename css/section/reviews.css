@@ -15,6 +15,10 @@
   height: 50%;
   position: relative;
   filter: grayscale(100); }
+  @media (max-width: 768px) {
+    .reviews__item {
+      flex-basis: 50%;
+      height: 25%; } }
   .reviews__item:hover > .reviews__overlay {
     visibility: visible;
     opacity: 1; }
@@ -32,33 +36,29 @@
   right: 0;
   height: 100%;
   width: 100%;
-  padding: rem(60) rem(29);
+  padding: 3.75rem 1.8125rem;
   background: rgba(20, 20, 20, 0.6);
   opacity: 0;
   visibility: hidden; }
+  @media (max-width: 768px) {
+    .reviews__overlay {
+      padding: 1.875rem 2.25rem;
+      text-align: center; } }
+  @media (max-width: 480px) {
+    .reviews__overlay {
+      display: none; } }
 
 .reviews__name {
-  font: rem(14) Gagalin-Regular;
+  font: 0.875rem Gagalin-Regular;
   color: white;
-  margin-bottom: rem(15); }
+  margin-bottom: 0.9375rem; }
 
 .reviews__text {
-  font: 300 rem(14)/rem(24) Ubuntu-Light;
+  font: 300 0.875rem/1.5rem Ubuntu-Light;
   color: white; }
+  @media (max-width: 768px) {
+    .reviews__text {
+      margin-bottom: 1.5625rem; } }
 
 .reviews__link:hover {
   background: #1f2122; }
-
-@media (max-width: 768px) {
-  .reviews__item {
-    flex-basis: 50%;
-    height: 25%; }
-  .reviews__overlay {
-    padding: rem(30) rem(36);
-    text-align: center; }
-  .reviews__text {
-    margin-bottom: rem(25); } }
-
-@media (max-width: 468px) {
-  .reviews__overlay {
-    display: none; } }

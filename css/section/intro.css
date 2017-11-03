@@ -1,0 +1,70 @@
+.intro {
+  min-height: 650px;
+  height: 100vh;
+  background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
+  background-size: auto, cover;
+  display: flex;
+  flex-direction: column; }
+
+.intro__container {
+  flex: 1; }
+
+.intro__preview {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
+  flex: .8; }
+  @media (max-width: 768px) {
+    .intro__preview {
+      padding-top: 0;
+      flex-direction: column; } }
+
+.intro__preview-image {
+  background: url("../img/svg/drops.svg") 0 28px no-repeat;
+  display: flex;
+  justify-content: center;
+  width: 451px;
+  height: 424px;
+  padding-bottom: 5.6875rem;
+  padding-left: 14px; }
+  @media (max-width: 768px) {
+    .intro__preview-image {
+      padding-left: 20px; } }
+  @media (max-width: 480px) {
+    .intro__preview-image {
+      width: 333px;
+      height: 339px;
+      background-position: 0 12px;
+      background-size: contain;
+      padding-left: 14px; } }
+
+.intro__preview-picture {
+  align-self: center; }
+
+.intro__preview-text {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin-left: 0.625rem; }
+  @media (max-width: 768px) {
+    .intro__preview-text {
+      text-align: center;
+      margin-top: 0; } }
+
+.intro__preview-text_orange {
+  font: 4.5rem Gagalin-Regular;
+  text-transform: uppercase;
+  color: #f9b43b;
+  margin-bottom: 0.9375rem; }
+  @media (max-width: 480px) {
+    .intro__preview-text_orange {
+      font-size: 3.75rem; } }
+
+.intro__preview-text_normal {
+  font: 4.0625rem/3.75rem Lifehack-Medium;
+  color: white; }
+  @media (max-width: 480px) {
+    .intro__preview-text_normal {
+      font-size: 3.375rem; } }

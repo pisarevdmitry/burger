@@ -12,7 +12,7 @@
     <div class="wrapper">
         <div class="maincontent">
             <section class="intro">
-                <div class="container">
+                <div class="container intro__container">
                     <header class="header">
                         <div class="logo header__logo">
                             <img class="logo__image" src="img/svg/logo.svg" alt="logo">
@@ -26,7 +26,7 @@
                             <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
                         </ul>
                         <a class="btn btn_red" href="#">Заказать</a>
-
+                        <div class="header__hamburger"></div>
                     </header>
                     <div class="intro__preview ">
                         <div class="intro__preview-image">
@@ -53,39 +53,44 @@
                 </div>
             </section>
             <section class="advantages">
-                <div class="container">
+                <div class="container ">
                     <h1 class="advantages__header">Мы лучшие</h1>
                     <ul class="advantages-list">
                         <li class="advantages__item">
                             <div class="advantages__image">
                                 <img class="advantages__picture" src="img/svg/meat.svg" alt="meat">
                             </div>
-                            <h3 class="advantages__title">100% свежее мясо</h3>
-                            <p class="advantages__text">
-                                Драма представляет собой деструктивный цикл.Анапест представляет собой анапест.
-                                Ямб неравномерее.
-                            </p>
-
+                            <div class="advantages__description">
+                                <h3 class="advantages__title">100% свежее мясо</h3>
+                                <p class="advantages__text">
+                                    Драма представляет собой деструктивный цикл.Анапест представляет собой анапест.
+                                    Ямб неравномерее.
+                                </p>
+                            </div>
                         </li>
                         <li class="advantages__item">
                             <div class="advantages__image">
                                 <img class="advantages__picture" src="img/svg/hand.svg" alt="hand">
                             </div>
+                            <div class="advantages__description">
                             <h3 class="advantages__title">Ручная сборка</h3>
                             <p class="advantages__text">
                                 Драма представляет собой деструктивный цикл.Анапест представляет собой анапест.
                                 Первое полустишие притягивает сюжетный реформаторский пафос.
                             </p>
+                            </div>
                         </li>
                         <li class="advantages__item">
                             <div class="advantages__image">
                                 <img class="advantages__picture" src="img/svg/natural.svg" alt="leaf">
                             </div>
+                            <div class="advantages__description">
                             <h3 class="advantages__title">Натуральные ингридиенты</h3>
                             <p class="advantages__text">
                                 Драма представляет собой деструктивный цикл.Анапест представляет собой анапест.
 
                             </p>
+                </div>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +104,7 @@
                                 <a class="team-accordion__title team-accordion__title-active  ">дэниэл редклиф</a>
                                 <div class="team-accordion__decription">
                                     <div class="team__image">
-                                        <img src="img/jpg/team-image.jpg" class="team__picture">
+                                        <img src="img/jpg/team-image.jpg" class="team__picture" alt="photo">
                                     </div>
                                     <div class="team__decription">
                                         <span class="team__position">Оператор</span>
@@ -112,7 +117,7 @@
                                 <a class="team-accordion__title  ">ричард джеймс</a>
                                 <div class="team-accordion__decription">
                                     <div class="team__image">
-                                        <img src="img/jpg/team-image.jpg" class="team__picture">
+                                        <img src="img/jpg/team-image.jpg" class="team__picture" alt="photo">
                                     </div>
                                     <div class="team__decription">
                                         <span class="team__position">Оператор</span>
@@ -125,7 +130,7 @@
                                 <a class="team-accordion__title ">джейк финн</a>
                                 <div class="team-accordion__decription">
                                     <div class="team__image">
-                                        <img src="img/jpg/team-image.jpg" class="team__picture">
+                                        <img src="img/jpg/team-image.jpg" class="team__picture" alt="photo">
                                     </div>
                                     <div class="team__decription">
                                         <span class="team__position">Оператор</span>
@@ -138,7 +143,7 @@
                                 <a class="team-accordion__title">николай иванов</a>
                                 <div class="team-accordion__decription">
                                     <div class="team__image">
-                                        <img src="img/jpg/team-image.jpg" class="team__picture">
+                                        <img src="img/jpg/team-image.jpg" class="team__picture" alt="photo">
                                     </div>
                                     <div class="team__decription">
                                         <span class="team__position">Оператор</span>
@@ -344,7 +349,7 @@
                                 <div class="form__row">
                                     <div class="form__column" >
                                         <label class="form__label" for="comment">Комментарий</label>
-                                        <textarea name="comment" id="comment" class="form__texarea"></textarea>
+                                        <textarea name="comment" id="comment" class="form__textarea"></textarea>
                                     </div>
                                 </div>
                                 <div class="form__row">

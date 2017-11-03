@@ -1,0 +1,78 @@
+.advantages {
+  min-height: 650px;
+  height: 100vh;
+  background: url("../img/jpg/bg.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .advantages {
+      background-position: center center; } }
+
+.advantages__header {
+  font: bold 4.5rem Gagalin-Regular;
+  text-align: center;
+  color: #2f3234;
+  margin: 0; }
+  @media (max-width: 480px) {
+    .advantages__header {
+      font-size: 3.125rem; } }
+
+.advantages-list {
+  padding: 0;
+  display: flex;
+  list-style-type: none; }
+  @media (max-width: 480px) {
+    .advantages-list {
+      display: block; } }
+
+.advantages__item {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .advantages__item {
+      margin-right: 1.5rem; } }
+  @media (max-width: 480px) {
+    .advantages__item {
+      flex-grow: 0;
+      flex-direction: row;
+      margin-bottom: 1.25rem; } }
+
+.advantages__image {
+  height: 95px; }
+  @media (max-width: 480px) {
+    .advantages__image {
+      flex-basis: 20%;
+      margin-right: 0.6875rem;
+      height: 80px; } }
+
+.advantages__title {
+  font: 1.5rem/1.75rem Lifehack-Medium;
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 1.25rem; }
+  @media (max-width: 480px) {
+    .advantages__title {
+      text-align: left; } }
+
+.advantages__text {
+  font: 300 0.875rem Ubuntu-Light;
+  color: rgba(47, 50, 52, 0.8);
+  text-align: center;
+  margin: 0; }
+  @media (max-width: 480px) {
+    .advantages__text {
+      text-align: left; } }
+
+.advantages__picture {
+  width: 100%;
+  height: 100%; }
+
+.form__radio {
+  margin-right: 1.25rem; }
+
+@media (max-width: 480px) {
+  .advantages__description {
+    flex-basis: 80%; } }

@@ -9,11 +9,10 @@
 .footer__conteiner {
   display: flex;
   height: 100%; }
+  @media (max-width: 480px) {
+    .footer__conteiner {
+      flex-direction: column;
+      justify-content: center; } }
 
 .footer__column {
   flex: 1 0 0; }
-
-@media (max-width: 480px) {
-  .footer__conteiner {
-    flex-direction: column;
-    justify-content: center; } }

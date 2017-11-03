@@ -1,16 +1,21 @@
 .intro {
-  min-width: 1100px;
   min-height: 650px;
   height: 100vh;
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
-  background-size: auto, cover; }
+  background-size: auto, cover;
+  display: flex;
+  flex-direction: column; }
+
+.intro__container {
+  flex: 1; }
 
 .intro__preview {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  padding-top: 15vh; }
+  padding-top: 15vh;
+  flex: .8; }
 
 .intro__preview-image {
   background: url("../img/svg/drops.svg") 0 28px no-repeat;
@@ -18,7 +23,8 @@
   justify-content: center;
   width: 451px;
   height: 424px;
-  padding-bottom: rem(91); }
+  padding-bottom: rem(91);
+  padding-left: 14px; }
 
 .intro__preview-picture {
   align-self: center; }
@@ -38,3 +44,25 @@
 .intro__preview-text_normal {
   font: rem(65)/rem(60) Lifehack-Medium;
   color: white; }
+
+@media (max-width: 768px) {
+  .intro__preview {
+    padding-top: 0;
+    flex-direction: column; }
+  .intro__preview-text {
+    text-align: center;
+    margin-top: 0; }
+  .intro__preview-image {
+    padding-left: 20px; } }
+
+@media (max-width: 468px) {
+  .intro__preview-image {
+    width: 333px;
+    height: 339px;
+    background-position: 0 12px;
+    background-size: contain;
+    padding-left: 14px; }
+  .intro__preview-text_orange {
+    font-size: rem(60); }
+  .intro__preview-text_normal {
+    font-size: rem(54); } }

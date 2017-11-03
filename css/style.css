@@ -406,18 +406,27 @@ template {
   font-style: normal; }
 
 .intro {
-  min-width: 1100px;
   min-height: 650px;
   height: 100vh;
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
-  background-size: auto, cover; }
+  background-size: auto, cover;
+  display: flex;
+  flex-direction: column; }
+
+.intro__container {
+  flex: 1; }
 
 .intro__preview {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  padding-top: 15vh; }
+  padding-top: 15vh;
+  flex: .8; }
+  @media (max-width: 768px) {
+    .intro__preview {
+      padding-top: 0;
+      flex-direction: column; } }
 
 .intro__preview-image {
   background: url("../img/svg/drops.svg") 0 28px no-repeat;
@@ -425,7 +434,18 @@ template {
   justify-content: center;
   width: 451px;
   height: 424px;
-  padding-bottom: 5.6875rem; }
+  padding-bottom: 5.6875rem;
+  padding-left: 14px; }
+  @media (max-width: 768px) {
+    .intro__preview-image {
+      padding-left: 20px; } }
+  @media (max-width: 480px) {
+    .intro__preview-image {
+      width: 333px;
+      height: 339px;
+      background-position: 0 12px;
+      background-size: contain;
+      padding-left: 14px; } }
 
 .intro__preview-picture {
   align-self: center; }
@@ -435,24 +455,37 @@ template {
   flex-direction: column;
   width: 450px;
   margin-left: 0.625rem; }
+  @media (max-width: 768px) {
+    .intro__preview-text {
+      text-align: center;
+      margin-top: 0; } }
 
 .intro__preview-text_orange {
   font: 4.5rem Gagalin-Regular;
   text-transform: uppercase;
   color: #f9b43b;
   margin-bottom: 0.9375rem; }
+  @media (max-width: 480px) {
+    .intro__preview-text_orange {
+      font-size: 3.75rem; } }
 
 .intro__preview-text_normal {
   font: 4.0625rem/3.75rem Lifehack-Medium;
   color: white; }
+  @media (max-width: 480px) {
+    .intro__preview-text_normal {
+      font-size: 3.375rem; } }
 
 .logo__image {
   width: 100%;
   height: 100%; }
 
 .arrow {
+  position: absolute;
   text-align: center;
-  margin-top: 3.125rem; }
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .arrow__link {
   width: 27px;
@@ -469,11 +502,17 @@ template {
   justify-content: space-between;
   align-items: center;
   padding-top: 2vh; }
+  @media (max-width: 768px) {
+    .header {
+      justify-content: flex-start; } }
 
 .header__logo {
-  margin-right: 12.5rem;
+  margin-right: auto;
   width: 93px;
   height: 68px; }
+  @media (max-width: 768px) {
+    .header__logo {
+      margin-right: auto; } }
 
 .header__into-text {
   display: flex;
@@ -481,10 +520,18 @@ template {
   width: 450px;
   margin-left: 0.625rem; }
 
-.header__arrow {
-  display: flex;
-  justify-content: center;
-  margin-top: 12.5rem; }
+.header__hamburger {
+  display: none;
+  width: 24px;
+  height: 4px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 9px  white, 0 -9px white; }
+
+@media (max-width: 768px) {
+  .header__hamburger {
+    display: block;
+    margin-left: 1.25rem; } }
 
 .nav {
   font: 500 0.8125rem Ubuntu-Medium;
@@ -494,6 +541,9 @@ template {
   color: white;
   text-transform: uppercase;
   display: flex; }
+  @media (max-width: 768px) {
+    .nav {
+      display: none; } }
 
 .nav__item {
   position: relative;
@@ -534,44 +584,72 @@ template {
   background: #2f3234; }
 
 .advantages {
-  min-width: 1100px;
   min-height: 650px;
   height: 100vh;
   background: url("../img/jpg/bg.jpg") no-repeat;
   background-size: cover;
   display: flex;
   align-items: center; }
+  @media (max-width: 768px) {
+    .advantages {
+      background-position: center center; } }
 
 .advantages__header {
   font: bold 4.5rem Gagalin-Regular;
   text-align: center;
   color: #2f3234;
   margin: 0; }
+  @media (max-width: 480px) {
+    .advantages__header {
+      font-size: 3.125rem; } }
 
 .advantages-list {
   padding: 0;
-  display: flex; }
+  display: flex;
+  list-style-type: none; }
+  @media (max-width: 480px) {
+    .advantages-list {
+      display: block; } }
 
 .advantages__item {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
   align-items: center; }
+  @media (max-width: 768px) {
+    .advantages__item {
+      margin-right: 1.5rem; } }
+  @media (max-width: 480px) {
+    .advantages__item {
+      flex-grow: 0;
+      flex-direction: row;
+      margin-bottom: 1.25rem; } }
 
 .advantages__image {
   height: 95px; }
+  @media (max-width: 480px) {
+    .advantages__image {
+      flex-basis: 20%;
+      margin-right: 0.6875rem;
+      height: 80px; } }
 
 .advantages__title {
   font: 1.5rem/1.75rem Lifehack-Medium;
   color: #2f3234;
   text-align: center;
   margin-bottom: 1.25rem; }
+  @media (max-width: 480px) {
+    .advantages__title {
+      text-align: left; } }
 
 .advantages__text {
   font: 300 0.875rem Ubuntu-Light;
   color: rgba(47, 50, 52, 0.8);
   text-align: center;
   margin: 0; }
+  @media (max-width: 480px) {
+    .advantages__text {
+      text-align: left; } }
 
 .advantages__picture {
   width: 100%;
@@ -579,6 +657,10 @@ template {
 
 .form__radio {
   margin-right: 1.25rem; }
+
+@media (max-width: 480px) {
+  .advantages__description {
+    flex-basis: 80%; } }
 
 .reviews {
   min-height: 650px;
@@ -595,7 +677,12 @@ template {
 .reviews__item {
   flex: 1 0 25%;
   height: 50%;
-  position: relative; }
+  position: relative;
+  filter: grayscale(100); }
+  @media (max-width: 768px) {
+    .reviews__item {
+      flex-basis: 50%;
+      height: 25%; } }
   .reviews__item:hover > .reviews__overlay {
     visibility: visible;
     opacity: 1; }
@@ -617,6 +704,13 @@ template {
   background: rgba(20, 20, 20, 0.6);
   opacity: 0;
   visibility: hidden; }
+  @media (max-width: 768px) {
+    .reviews__overlay {
+      padding: 1.875rem 2.25rem;
+      text-align: center; } }
+  @media (max-width: 480px) {
+    .reviews__overlay {
+      display: none; } }
 
 .reviews__name {
   font: 0.875rem Gagalin-Regular;
@@ -626,18 +720,12 @@ template {
 .reviews__text {
   font: 300 0.875rem/1.5rem Ubuntu-Light;
   color: white; }
+  @media (max-width: 768px) {
+    .reviews__text {
+      margin-bottom: 1.5625rem; } }
 
 .reviews__link:hover {
   background: #1f2122; }
-
-@media (max-width: 768px) {
-  .reviews__item {
-    flex-basis: 25%; }
-  .reviews__overlay {
-    padding: 1.875rem 2.25rem;
-    text-align: center; }
-  .reviews__text {
-    margin-bottom: 1.5625rem; } }
 
 .controls {
   position: fixed;
@@ -673,6 +761,9 @@ template {
   background: url("../img/jpg/team.jpg");
   background-size: cover;
   position: relative; }
+  @media (max-width: 768px) {
+    .section-team {
+      background-position: center center; } }
 
 .team__overlay {
   position: absolute;
@@ -683,14 +774,27 @@ template {
   display: flex;
   justify-content: center;
   padding-top: 4.375rem; }
+  @media (max-width: 768px) {
+    .team__overlay {
+      width: 100%; } }
 
 .team {
   width: 75%; }
+  @media (max-width: 768px) {
+    .team {
+      width: 50%;
+      text-align: center; } }
+  @media (max-width: 480px) {
+    .team {
+      width: 75%; } }
 
 .team__header {
   color: #f9b43b;
   font: bold 4.5rem Gagalin-Regular;
   margin: 0; }
+  @media (max-width: 480px) {
+    .team__header {
+      font-size: 3.125rem; } }
 
 .team-accordion {
   margin: 0;
@@ -700,6 +804,12 @@ template {
 
 .team-accordion__item {
   margin-bottom: 1.25rem; }
+  @media (max-width: 768px) {
+    .team-accordion__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0; } }
 
 .team-accordion__title {
   font: 0.75rem Gagalin-Regular;
@@ -721,6 +831,9 @@ template {
       transform: rotate(180deg); }
     .team-accordion__title-active + .team-accordion__decription {
       height: auto; }
+  @media (max-width: 768px) {
+    .team-accordion__title {
+      font-size: 1.5625rem; } }
 
 .team-accordion__decription {
   display: flex;
@@ -730,6 +843,10 @@ template {
   margin-top: 0.875rem;
   margin-left: 0.5rem;
   margin-bottom: 1.5625rem; }
+  @media (max-width: 768px) {
+    .team-accordion__decription {
+      flex-direction: column;
+      align-items: center; } }
 
 .team__image {
   flex: 0 0 100px;
@@ -740,6 +857,9 @@ template {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 1.25rem; }
+  @media (max-width: 768px) {
+    .team__image {
+      margin-bottom: 0.9375rem; } }
 
 .team__picture {
   width: 130px;
@@ -755,31 +875,6 @@ template {
 .team__text {
   font-family: Ubuntu-Light;
   line-height: 1.5rem; }
-
-@media (max-width: 768px) {
-  .team__overlay {
-    width: 100%; }
-  .team {
-    width: 50%;
-    text-align: center; }
-  .team-accordion__decription {
-    flex-direction: column;
-    align-items: center; }
-  .team-accordion__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0; }
-  .team__image {
-    margin-bottom: 0.9375rem; }
-  .team-accordion__title {
-    font-size: 1.5625rem; } }
-
-@media (max-width: 480px) {
-  .team__header {
-    font-size: 3.125rem; }
-  .team {
-    width: 75%; } }
 
 .menu {
   background: url("../img/jpg/menu.jpg");
@@ -856,9 +951,20 @@ template {
   color: #f9b43b;
   margin: 0;
   margin-bottom: 4.6875rem; }
+  @media (max-width: 480px) {
+    .form__header {
+      font-size: 3.125rem; } }
 
 .form-delivery {
   display: flex; }
+  @media (max-width: 768px) {
+    .form-delivery {
+      display: block;
+      width: 65%;
+      margin: 0 auto; } }
+  @media (max-width: 480px) {
+    .form-delivery {
+      width: 100%; } }
 
 .form__row {
   display: flex;
@@ -889,13 +995,13 @@ template {
     border: 2px solid #f9b43b;
     outline: none; }
 
-.form__texarea {
+.form__textarea {
   height: 108px;
   border: 2px solid transparent;
   border-radius: 6px;
   resize: none;
   width: 100%; }
-  .form__texarea:focus {
+  .form__textarea:focus {
     border: 2px solid #f9b43b;
     outline: none; }
 
@@ -953,38 +1059,42 @@ input[type="checkbox"]:checked + .form__label_type_checkbox:after {
   opacity: 1; }
 
 input[type="submit"] {
-  border: none; }
+  border: none;
+  outline: none;
+  cursor: pointer; }
 
 input[type="reset"] {
   border: none;
   padding: 0.625rem 0.9375rem;
   background: transparent;
   font: 300 0.9375rem Ubuntu-Light;
-  color: white; }
+  color: white;
+  outline: none;
+  cursor: pointer; }
 
 @media (max-width: 768px) {
-  .form-delivery {
-    display: block;
-    width: 65%;
-    margin: 0 auto; }
   .form__column_tablet {
     margin-right: 0; } }
 
 @media (max-width: 480px) {
-  .form__header {
-    font-size: 3.125rem; }
-  .form-delivery {
-    width: 100%; }
   .form__column__disabled {
-    display: none; }
+    display: none; } }
+
+@media (max-width: 480px) {
   .form__column__mobile {
-    margin-right: 0; }
+    margin-right: 0; } }
+
+@media (max-width: 480px) {
   .form__column_centered {
     display: flex;
-    justify-content: center; }
+    justify-content: center; } }
+
+@media (max-width: 480px) {
   .form__checkbox_mobile {
     display: flex;
-    justify-content: center; }
+    justify-content: center; } }
+
+@media (max-width: 480px) {
   .form__buttons_mobile {
     display: flex;
     justify-content: center; } }
@@ -1008,14 +1118,13 @@ input[type="reset"] {
 .footer__conteiner {
   display: flex;
   height: 100%; }
+  @media (max-width: 480px) {
+    .footer__conteiner {
+      flex-direction: column;
+      justify-content: center; } }
 
 .footer__column {
   flex: 1 0 0; }
-
-@media (max-width: 480px) {
-  .footer__conteiner {
-    flex-direction: column;
-    justify-content: center; } }
 
 .social {
   margin: 0;
@@ -1025,6 +1134,10 @@ input[type="reset"] {
   justify-content: flex-end;
   align-items: center;
   height: 100%; }
+  @media (max-width: 480px) {
+    .social {
+      justify-content: center;
+      margin-top: 0.9375rem; } }
 
 .social__item {
   margin-right: 1.25rem; }
@@ -1044,11 +1157,6 @@ input[type="reset"] {
   width: 100%;
   height: 100%; }
 
-@media (max-width: 480px) {
-  .social {
-    justify-content: center;
-    margin-top: 0.9375rem; } }
-
 .info {
   display: flex;
   flex-direction: column;
@@ -1058,6 +1166,10 @@ input[type="reset"] {
   display: block;
   font: 300 0.875rem Ubuntu-Light;
   color: white; }
+  @media (max-width: 480px) {
+    .info__adress {
+      text-align: center;
+      margin-bottom: 0.3125rem; } }
 
 .info__phone-image {
   width: 12px;
@@ -1069,9 +1181,6 @@ input[type="reset"] {
   color: #e45028; }
 
 @media (max-width: 480px) {
-  .info__adress {
-    text-align: center;
-    margin-bottom: 0.3125rem; }
   .info__phone {
     text-align: center; } }
 
@@ -1095,7 +1204,7 @@ body {
   min-height: 650px;
   height: 100vh; }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .container {
     width: 100%;
     padding: 0 1.25rem; } }
