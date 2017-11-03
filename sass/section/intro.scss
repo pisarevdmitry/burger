@@ -1,0 +1,75 @@
+@import "../mixins";
+.intro{
+  min-height: 650px;
+  height: 100vh;
+  background:url("../img/png/texture.png"),
+  url("../img/jpg/header.jpg") no-repeat;
+  background-size: auto, cover;
+  display: flex;
+  flex-direction: column;
+
+}
+.intro__container{
+  flex: 1;
+}
+.intro__preview{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
+  flex: .8;
+  @include tablet{
+    padding-top: 0;
+    flex-direction: column;
+  }
+}
+.intro__preview-image{
+  background: url("../img/svg/drops.svg")0 28px no-repeat;
+  display: flex;
+  justify-content: center;
+  width: 451px;
+  height: 424px;
+  padding-bottom: rem(91);
+  padding-left: 14px;
+  @include tablet{
+    padding-left: 20px;
+  }
+  @include mobile{
+    width: 333px;
+    height: 339px;
+    background-position: 0 12px;
+    background-size: contain;
+    padding-left: 14px;
+  }
+}
+.intro__preview-picture{
+  align-self: center;
+}
+.intro__preview-text{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin-left: rem(10);
+  @include tablet{
+    text-align: center;
+    margin-top: 0;
+  }
+  }
+.intro__preview-text_orange{
+  font:rem(72) Gagalin-Regular;
+  text-transform: uppercase;
+  color:#f9b43b;
+  margin-bottom: rem(15);
+  @include mobile{
+    font-size: rem(60);
+   }
+}
+.intro__preview-text_normal{
+  font: rem(65)/rem(60) Lifehack-Medium;
+  color: white;
+  @include mobile{
+    font-size: rem(54);
+  }
+  }
+
