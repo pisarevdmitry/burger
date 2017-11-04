@@ -1,0 +1,89 @@
+.intro {
+  min-height: 650px;
+  height: 100vh;
+  background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
+  background-size: auto, cover;
+  display: flex;
+  flex-direction: column; }
+
+.intro__container {
+  display: flex;
+  flex: 1;
+  flex-direction: column; }
+  .intro__container_centered {
+    align-items: center;
+    justify-content: center;
+    flex: .9; }
+
+.intro__preview {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .intro__preview {
+      padding-top: 0;
+      flex-direction: column; } }
+
+.intro__preview-image {
+  background: url("../img/svg/drops.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  width: 451px;
+  height: 424px;
+  padding-bottom: 8.625rem;
+  padding-left: 1.25rem; }
+  @media (max-width: 480px) {
+    .intro__preview-image {
+      width: 264px;
+      height: 298px;
+      background-position: 0 12px;
+      background-size: contain;
+      padding-left: 0.875rem;
+      padding-bottom: 6.4375rem; } }
+
+.intro__preview-picture {
+  align-self: center;
+  width: 100%; }
+
+.intro__preview-text {
+  display: flex;
+  flex-direction: column;
+  width: 28.125rem;
+  margin-left: 0.625rem; }
+  @media (max-width: 768px) {
+    .intro__preview-text {
+      text-align: center;
+      margin-top: -3.5625rem; } }
+
+.intro__preview-text_orange {
+  font: 4.5rem Gagalin-Regular;
+  text-transform: uppercase;
+  color: #f9b43b;
+  margin-bottom: 0.9375rem; }
+  @media (max-width: 480px) {
+    .intro__preview-text_orange {
+      font-size: 3.75rem; } }
+
+.intro__preview-text_normal {
+  font: 4.0625rem/3.75rem Lifehack-Medium;
+  color: white; }
+  @media (max-width: 480px) {
+    .intro__preview-text_normal {
+      font-size: 3.375rem; } }
+
+.hamburger-menu {
+  height: 1.5rem;
+  display: none;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: flex;
+      margin-left: 1.25rem; } }
+
+.hamburger-menu-bars {
+  width: 1.5rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 0.625rem;
+  box-shadow: 0 9px  white, 0 -9px white; }

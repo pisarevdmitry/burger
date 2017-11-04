@@ -1,0 +1,26 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.info__adress {
+  display: block;
+  font: 300 0.875rem Ubuntu-Light;
+  color: white; }
+  @media (max-width: 480px) {
+    .info__adress {
+      text-align: center;
+      margin-bottom: 0.3125rem; } }
+
+.info__phone-image {
+  width: 12px;
+  height: 11px;
+  fill: #e45028; }
+
+.info__phone-number {
+  font: bold 0.875rem Ubuntu-Bold;
+  color: #e45028; }
+
+@media (max-width: 480px) {
+  .info__phone {
+    text-align: center; } }

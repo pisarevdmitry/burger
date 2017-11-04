@@ -1,0 +1,25 @@
+.menu {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 100%;
+  display: flex; }
+
+.menu__item {
+  height: 100%; }
+
+.menu__header {
+  font: bold 40px Gagalin-Regular;
+  height: 100%;
+  text-align: left;
+  width: 80px;
+  position: relative;
+  border: 1px solid red; }
+
+.menu__header h2 {
+  transform: rotate(-90deg);
+  text-align: left;
+  white-space: nowrap;
+  color: black; }
