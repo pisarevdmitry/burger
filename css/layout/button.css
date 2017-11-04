@@ -1,10 +1,10 @@
 .btn {
   border-radius: 5px;
-  font: 500 13px Ubuntu-Medium;
+  font: 500 rem(13) Ubuntu-Medium;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 10px 15px; }
+  padding: rem(10) rem(15); }
 
 .btn_red {
   background: #e45028; }

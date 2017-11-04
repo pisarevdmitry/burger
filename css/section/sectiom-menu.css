@@ -1,0 +1,13 @@
+.section-menu {
+  min-height: 650px;
+  height: 100vh;
+  background: url("../img/jpg/menu.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+
+.section-menu__overlay {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  bottom: 0; }

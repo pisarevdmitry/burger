@@ -1,0 +1,16 @@
+.section-team {
+  min-height: 650px;
+  height: 100vh;
+  background: url("../img/jpg/team.jpg");
+  background-size: cover;
+  position: relative; }
+
+.section-team__overlay {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  background: rgba(47, 50, 52, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center; }

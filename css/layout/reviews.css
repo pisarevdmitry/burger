@@ -1,5 +1,4 @@
 .reviews {
-  min-width: 1100px;
   min-height: 650px;
   height: 100vh; }
 
@@ -9,13 +8,13 @@
   list-style: none;
   display: flex;
   flex-flow: row wrap;
-  min-width: 1100px;
   height: 100%; }
 
 .reviews__item {
   flex: 1 0 25%;
   height: 50%;
-  position: relative; }
+  position: relative;
+  filter: grayscale(100); }
   .reviews__item:hover > .reviews__overlay {
     visibility: visible;
     opacity: 1; }
@@ -33,19 +32,33 @@
   right: 0;
   height: 100%;
   width: 100%;
-  padding: 60px 29px;
+  padding: rem(60) rem(29);
   background: rgba(20, 20, 20, 0.6);
   opacity: 0;
   visibility: hidden; }
 
 .reviews__name {
-  font: 14px Gagalin-Regular;
+  font: rem(14) Gagalin-Regular;
   color: white;
-  margin-bottom: 15px; }
+  margin-bottom: rem(15); }
 
 .reviews__text {
-  font: 300 14px/24px Ubuntu-Light;
+  font: 300 rem(14)/rem(24) Ubuntu-Light;
   color: white; }
 
 .reviews__link:hover {
   background: #1f2122; }
+
+@media (max-width: 768px) {
+  .reviews__item {
+    flex-basis: 50%;
+    height: 25%; }
+  .reviews__overlay {
+    padding: rem(30) rem(36);
+    text-align: center; }
+  .reviews__text {
+    margin-bottom: rem(25); } }
+
+@media (max-width: 468px) {
+  .reviews__overlay {
+    display: none; } }
