@@ -414,51 +414,53 @@ template {
   flex-direction: column; }
 
 .intro__container {
-  flex: 1; }
+  display: flex;
+  flex: 1;
+  flex-direction: column; }
+  .intro__container_centered {
+    align-items: center;
+    justify-content: center; }
 
 .intro__preview {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  padding-top: 15vh;
-  flex: .8; }
+  align-items: center; }
   @media (max-width: 768px) {
     .intro__preview {
       padding-top: 0;
       flex-direction: column; } }
 
 .intro__preview-image {
-  background: url("../img/svg/drops.svg") 0 28px no-repeat;
+  background: url("../img/svg/drops.svg");
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   width: 451px;
   height: 424px;
-  padding-bottom: 5.6875rem;
-  padding-left: 14px; }
-  @media (max-width: 768px) {
-    .intro__preview-image {
-      padding-left: 20px; } }
+  padding-bottom: 8.625rem;
+  padding-left: 1.25rem; }
   @media (max-width: 480px) {
     .intro__preview-image {
       width: 333px;
       height: 339px;
       background-position: 0 12px;
       background-size: contain;
-      padding-left: 14px; } }
+      padding-left: 0.875rem;
+      padding-bottom: 6.4375rem; } }
 
 .intro__preview-picture {
-  align-self: center; }
+  align-self: center;
+  width: 100%; }
 
 .intro__preview-text {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 28.125rem;
   margin-left: 0.625rem; }
   @media (max-width: 768px) {
     .intro__preview-text {
       text-align: center;
-      margin-top: 0; } }
+      margin-top: -3.5625rem; } }
 
 .intro__preview-text_orange {
   font: 4.5rem Gagalin-Regular;
@@ -475,6 +477,22 @@ template {
   @media (max-width: 480px) {
     .intro__preview-text_normal {
       font-size: 3.375rem; } }
+
+.hamburger-menu {
+  height: 1.5rem;
+  display: none;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: flex;
+      margin-left: 1.25rem; } }
+
+.hamburger-menu-bars {
+  width: 1.5rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 0.625rem;
+  box-shadow: 0 9px  white, 0 -9px white; }
 
 .logo__image {
   width: 100%;
@@ -519,19 +537,6 @@ template {
   flex-direction: column;
   width: 450px;
   margin-left: 0.625rem; }
-
-.header__hamburger {
-  display: none;
-  width: 24px;
-  height: 4px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 9px  white, 0 -9px white; }
-
-@media (max-width: 768px) {
-  .header__hamburger {
-    display: block;
-    margin-left: 1.25rem; } }
 
 .nav {
   font: 500 0.8125rem Ubuntu-Medium;
@@ -706,7 +711,7 @@ template {
   visibility: hidden; }
   @media (max-width: 768px) {
     .reviews__overlay {
-      padding: 1.875rem 2.25rem;
+      padding: 1.5625rem 1.5625rem;
       text-align: center; } }
   @media (max-width: 480px) {
     .reviews__overlay {
@@ -953,7 +958,8 @@ template {
   margin-bottom: 4.6875rem; }
   @media (max-width: 480px) {
     .form__header {
-      font-size: 3.125rem; } }
+      font-size: 3.125rem;
+      margin-bottom: 1.5625rem; } }
 
 .form-delivery {
   display: flex; }
@@ -1197,14 +1203,11 @@ body {
   overflow: hidden; }
 
 .container {
+  width: 100%;
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 1.25rem; }
 
 .section {
   min-height: 650px;
   height: 100vh; }
-
-@media (max-width: 1100px) {
-  .container {
-    width: 100%;
-    padding: 0 1.25rem; } }

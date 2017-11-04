@@ -42,7 +42,7 @@
   visibility: hidden; }
   @media (max-width: 768px) {
     .reviews__overlay {
-      padding: 1.875rem 2.25rem;
+      padding: 1.5625rem 1.5625rem;
       text-align: center; } }
   @media (max-width: 480px) {
     .reviews__overlay {

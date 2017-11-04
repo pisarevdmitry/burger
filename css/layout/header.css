@@ -21,16 +21,3 @@
   flex-direction: column;
   width: 450px;
   margin-left: 0.625rem; }
-
-.header__hamburger {
-  display: none;
-  width: 24px;
-  height: 4px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 9px  white, 0 -9px white; }
-
-@media (max-width: 768px) {
-  .header__hamburger {
-    display: block;
-    margin-left: 1.25rem; } }

@@ -13,7 +13,8 @@
   margin-bottom: 4.6875rem; }
   @media (max-width: 480px) {
     .form__header {
-      font-size: 3.125rem; } }
+      font-size: 3.125rem;
+      margin-bottom: 1.5625rem; } }
 
 .form-delivery {
   display: flex; }
