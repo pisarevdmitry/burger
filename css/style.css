@@ -442,8 +442,8 @@ template {
   padding-left: 1.25rem; }
   @media (max-width: 480px) {
     .intro__preview-image {
-      width: 333px;
-      height: 339px;
+      width: 264px;
+      height: 298px;
       background-position: 0 12px;
       background-size: contain;
       padding-left: 0.875rem;
@@ -1197,8 +1197,7 @@ input[type="reset"] {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.42;
-  font-size: 16px; }
+  line-height: 1.42; }
 
 .wrapper {
   overflow: hidden; }
@@ -1212,3 +1211,9 @@ body {
 .section {
   min-height: 650px;
   height: 100vh; }
+
+html {
+  font-size: 16px; }
+  @media (max-width: 480px) {
+    html {
+      font-size: 13px; } }

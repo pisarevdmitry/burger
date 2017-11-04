@@ -35,8 +35,8 @@
   padding-left: 1.25rem; }
   @media (max-width: 480px) {
     .intro__preview-image {
-      width: 333px;
-      height: 339px;
+      width: 264px;
+      height: 298px;
       background-position: 0 12px;
       background-size: contain;
       padding-left: 0.875rem;
