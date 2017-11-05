@@ -1,25 +1,27 @@
-
+@import "../mixins";
 .header{
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 2vh;
+  @include tablet{
+    justify-content: flex-start;
+  }
 }
 .header__logo{
-  margin-right: 200px;
+  margin-right: auto;
   width: 93px;
   height: 68px;
+  @include tablet{
+    margin-right: auto;
+  }
 }
 .header__into-text{
   display: flex;
   flex-direction: column;
   width: 450px;
-  margin-left: 10px;
+  margin-left: rem(10);
   }
 
-.header__arrow{
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-}
+

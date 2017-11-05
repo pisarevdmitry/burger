@@ -1,0 +1,128 @@
+@import "../mixins";
+.section-team{
+  background: url("../img/jpg/team.jpg");
+  background-size: cover;
+  position: relative;
+  @include tablet{
+    background-position: center center;
+  }
+}
+.team__overlay{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  background: rgba(47,50,52,.92);
+  display: flex;
+  justify-content: center;
+  padding-top: rem(70);
+  @include tablet{
+    width: 100%;
+  }
+}
+.team{
+  width: 75%;
+  @include tablet{
+    width: 50%;
+    text-align: center;
+  }
+  @include mobile{
+    width: 75%;
+  }
+}
+.team__header{
+  color: #f9b43b;
+  font: bold rem(72) Gagalin-Regular;
+  margin: 0;
+  @include mobile{
+    font-size: rem(50);
+  }
+}
+.team-accordion{
+  margin: 0;
+  margin-top:rem(70) ;
+  padding: 0;
+  list-style-type: none;
+}
+.team-accordion__item{
+  margin-bottom: rem(20);
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  &_active .team-accordion__title{
+    color: #f9b43b;
+    &:before{
+      transform: rotate(180deg);
+      }
+    }
+  &_active .team-accordion__decription{
+    height: auto;
+  }
+  }
+
+.team-accordion__title {
+  font: rem(12) Gagalin-Regular;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color:  #f9b43b;
+    border-bottom-width: 0;
+    margin-right: rem(5)
+  }
+  @include tablet{
+    font-size: rem(25);
+  }
+}
+.team-accordion__decription{
+  display: flex;
+  flex-flow: row nowrap;
+  height: 0;
+  overflow: hidden;
+  margin-top: rem(14);
+  margin-left: rem(8);
+  margin-bottom: rem(25);
+  @include tablet{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.team__image{
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: rem(20);
+  @include tablet{
+    margin-bottom: rem(15);
+  }
+}
+.team__picture{
+  width: 130px;
+  height: 100px;
+
+}
+.team__decription{
+  font-size: rem(14);
+  color:white;
+}
+.team__position{
+  font-family: Ubuntu-Bold;
+}
+.team__text{
+  font-family: Ubuntu-Light;
+  line-height: rem(24);
+}
+
