@@ -52,7 +52,17 @@
     align-items: center;
     margin-bottom: 0;
   }
-}
+  &_active .team-accordion__title{
+    color: #f9b43b;
+    &:before{
+      transform: rotate(180deg);
+      }
+    }
+  &_active .team-accordion__decription{
+    height: auto;
+  }
+  }
+
 .team-accordion__title {
   font: rem(12) Gagalin-Regular;
   color: white;
@@ -68,17 +78,6 @@
     border-top-color:  #f9b43b;
     border-bottom-width: 0;
     margin-right: rem(5)
-  }
-
-  &-active {
-    color: #f9b43b;
-    &:before {
-     transform: rotate(180deg);
-    }
-    & + .team-accordion__decription{
-      height: auto;
-    }
-
   }
   @include tablet{
     font-size: rem(25);

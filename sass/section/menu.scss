@@ -1,3 +1,4 @@
+@import "../mixins";
 .menu{
   background: url("../img/jpg/menu.jpg");
   background-size: cover;
@@ -24,11 +25,33 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  @include mobile{
+    width: 100%;
+    justify-content: flex-end;
+  }
+
 }
-.menu-accordion__item{
+.menu-accordion__item {
   height: 100%;
   padding: 0;
   display: flex;
+ @include mobile{
+  &_active{
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+ }
+  &_active .menu-accordion__decription {
+    width: 500px;
+    padding: rem(60) rem(30);
+    @include mobile {
+      width: 100%;
+     z-index: 2;
+
+    }
+  }
+
 }
 .menu-accordion__link{
   display: block;
@@ -37,10 +60,7 @@
   background-position: center bottom;
   position: relative;
   width: 80px;
-  &-active +.menu-accordion__decription{
-    width: 500px;
-    padding: rem(60) rem(30);
-  }
+
  }
 .menu-accordion__title{
   display: inline-block;
