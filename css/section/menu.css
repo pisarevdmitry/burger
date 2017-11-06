@@ -30,18 +30,16 @@
   height: 100%;
   padding: 0;
   display: flex; }
-  @media (max-width: 480px) {
-    .menu-accordion__item_active {
-      position: absolute;
-      left: 0;
-      right: 0; } }
   .menu-accordion__item_active .menu-accordion__decription {
     width: 500px;
     padding: 3.75rem 1.875rem; }
     @media (max-width: 480px) {
       .menu-accordion__item_active .menu-accordion__decription {
-        width: 100%;
-        z-index: 2; } }
+        width: 80%;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        height: 100%; } }
 
 .menu-accordion__link {
   display: block;

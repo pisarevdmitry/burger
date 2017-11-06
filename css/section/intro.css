@@ -4,7 +4,8 @@
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
   background-size: auto, cover;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
 
 .intro__container {
   display: flex;
@@ -33,6 +34,11 @@
   height: 424px;
   padding-bottom: 8.625rem;
   padding-left: 1.25rem; }
+  @media (max-width: 768px) {
+    .intro__preview-image {
+      background-size: contain;
+      width: 351px;
+      height: 329px; } }
   @media (max-width: 480px) {
     .intro__preview-image {
       width: 264px;
