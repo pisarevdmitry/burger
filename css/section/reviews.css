@@ -1,0 +1,66 @@
+.reviews {
+  min-height: 650px;
+  height: 100vh; }
+
+.reviews-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%; }
+
+.reviews__item {
+  flex: 1 0 25%;
+  height: 50%;
+  position: relative;
+  filter: grayscale(100); }
+  @media (max-width: 768px) {
+    .reviews__item {
+      flex-basis: 50%;
+      height: 25%; } }
+  .reviews__item:hover > .reviews__overlay {
+    visibility: visible;
+    opacity: 1; }
+
+.reviews__image {
+  filter: grayscale(100);
+  width: 100%;
+  height: 100%; }
+
+.reviews__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  padding: 2.8125rem 1.8125rem;
+  background: rgba(20, 20, 20, 0.6);
+  opacity: 0;
+  visibility: hidden; }
+  @media (max-width: 768px) {
+    .reviews__overlay {
+      padding: 1.25rem 1.25rem;
+      text-align: center; } }
+  @media (max-width: 480px) {
+    .reviews__overlay {
+      display: none; } }
+
+.reviews__name {
+  font: 0.875rem Gagalin-Regular;
+  color: white;
+  margin-bottom: 0.9375rem; }
+
+.reviews__text {
+  font: 300 0.875rem/1.5rem Ubuntu-Light;
+  color: white; }
+  @media (max-width: 768px) {
+    .reviews__text {
+      margin-top: 0.125rem;
+      margin-bottom: 0.4375rem;
+      line-height: 1.125rem; } }
+
+.reviews__link:hover {
+  background: #1f2122; }

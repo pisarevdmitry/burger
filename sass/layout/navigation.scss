@@ -1,15 +1,19 @@
+@import "../mixins";
 .nav{
-  font: 500 13px Ubuntu-Medium ;
+  font: 500 rem(13) Ubuntu-Medium ;
   list-style: none;
   padding: 0;
   margin: 0;
   color:white;
   text-transform: uppercase;
   display:flex;
+  @include tablet{
+    display: none
+  }
 }
 .nav__item{
   position: relative;
-  margin-right: 33px;
+  margin-right: rem(33);
   &:last-child:after{
     display: none;
     margin-right: 0;
