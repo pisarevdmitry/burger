@@ -3,12 +3,15 @@
 @import "normalize";
 @import "font";
 @import "section/intro";
-@import "layout/logo";
 @import "layout/arrow";
 @import "layout/header";
+@import "layout/logo";
 @import "layout/navigation";
 @import "layout/button";
+@import "layout/fixed-menu";
 @import "section/advantages";
+@import "section/slider";
+@import "layout/composition";
 @import "section/reviews";
 @import "layout/controls";
 @import "section/team";
@@ -35,6 +38,9 @@ body{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 rem(20);
+  &_slider{
+    display: flex;
+  }
 }
 .section{
   min-height: 650px;

@@ -2,7 +2,7 @@
   @return ($size/16)+rem;
 }
 @mixin tablet{
- @media (max-width: 768px) {
+ @media (max-width: 900px) {
    @content
  }
 }
