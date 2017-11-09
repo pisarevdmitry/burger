@@ -2,7 +2,7 @@
   background: url("../img/jpg/team.jpg");
   background-size: cover;
   position: relative; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .section-team {
       background-position: center center; } }
 
@@ -15,13 +15,13 @@
   display: flex;
   justify-content: center;
   padding-top: 4.375rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team__overlay {
       width: 100%; } }
 
 .team {
   width: 75%; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team {
       width: 50%;
       text-align: center; } }
@@ -33,7 +33,7 @@
   color: #f9b43b;
   font: bold 4.5rem Gagalin-Regular;
   margin: 0; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team__header {
       font-size: 3.75rem; } }
   @media (max-width: 480px) {
@@ -48,7 +48,7 @@
 
 .team-accordion__item {
   margin-bottom: 1.25rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team-accordion__item {
       display: flex;
       flex-direction: column;
@@ -75,7 +75,7 @@
     border-top-color: #f9b43b;
     border-bottom-width: 0;
     margin-right: 0.3125rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team-accordion__title {
       font-size: 1.5625rem; } }
 
@@ -87,7 +87,7 @@
   margin-top: 0.875rem;
   margin-left: 0.5rem;
   margin-bottom: 1.5625rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team-accordion__decription {
       flex-direction: column;
       align-items: center; } }
@@ -101,7 +101,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: 1.25rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .team__image {
       margin-bottom: 0.9375rem; } }
 

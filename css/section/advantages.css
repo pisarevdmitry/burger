@@ -5,7 +5,7 @@
   background-size: cover;
   display: flex;
   align-items: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .advantages {
       background-position: center center; } }
 
@@ -31,7 +31,7 @@
   flex: 1 0 0;
   flex-direction: column;
   align-items: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .advantages__item {
       margin-right: 1.5rem; } }
   @media (max-width: 480px) {
