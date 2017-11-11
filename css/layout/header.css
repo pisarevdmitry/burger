@@ -1,10 +1,11 @@
 .header {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 100%;
   align-items: center;
   padding-top: 2vh; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .header {
       justify-content: flex-start; } }
 
@@ -12,7 +13,7 @@
   margin-right: auto;
   width: 93px;
   height: 68px; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .header__logo {
       margin-right: auto; } }
 

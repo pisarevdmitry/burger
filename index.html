@@ -7,7 +7,7 @@
     <title>Mr.Burger</title>
     <link href="css/style.css" rel="stylesheet">
      <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -15,7 +15,7 @@
             <section class="intro">
                 <div class="container intro__container">
                     <header class="header">
-                        <div class="logo header__logo ">
+                        <div class="logo header__logo  " id="logo">
                             <img class="logo__image" src="img/svg/logo.svg" alt="logo">
                         </div>
                         <ul class="nav ">
@@ -27,8 +27,8 @@
                             <li class="nav__item "><a href="#" class="nav__link">контакты</a></li>
                         </ul>
                         <a class="btn btn_red" href="#">Заказать</a>
-                        <a href="#" class="hamburger-menu triger-menu ">
-                            <div class="hamburger-menu-bars "></div>
+                        <a href="#" class="hamburger-menu triger-menu " id="trigger-menu">
+                            <div class="hamburger-menu-bars " id="hamburger-menu-bars"></div>
                         </a>
                     </header>
                     <div class = "intro__container intro__container_centered">
@@ -549,23 +549,17 @@
                       </div>
                    </footer>
                </section>
-            <div class="fixed-menu">
-                <div class="logo logo_fixed ">
-                    <img class="logo__image" src="img/svg/logo.svg" alt="logo">
-                </div>
-                <ul class="fixed-menu ">
+            <ul class="fixed-menu "id="fixed-menu" >
                     <li class="fixed-menu__item "><a class="fixed-menu__link"> почему мы</a></li>
                     <li class="fixed-menu__item"><a href="#" class="fixed-menu__link">меню</a></li>
                     <li class="fixed-menu__item "><a href="#" class="fixed-menu__link">советы</a></li>
                     <li class="fixed-menu__item"><a href="#" class="fixed-menu__link">кто мы</a></li>
                     <li class="fixed-menu__item "><a href="#" class="fixed-menu__link">свяжитесь с нами</a></li>
                     <li class="fixed-menu__item "><a href="#" class="fixed-menu__link">контакты</a></li>
-                </ul>
-                <a href="#" class="close-menu triger-menu">
-                    <div class="close-menu_bars "></div>
-                </a>
-            </div>
+            </ul>
+
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>

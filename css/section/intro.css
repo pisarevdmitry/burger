@@ -20,7 +20,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .intro__preview {
       padding-top: 0;
       flex-direction: column; } }
@@ -34,7 +34,7 @@
   height: 424px;
   padding-bottom: 8.625rem;
   padding-left: 1.25rem; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .intro__preview-image {
       background-size: contain;
       width: 351px;
@@ -57,7 +57,7 @@
   flex-direction: column;
   width: 28.125rem;
   margin-left: 0.625rem; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .intro__preview-text {
       text-align: center;
       margin-top: -3.5625rem; } }
@@ -82,7 +82,7 @@
   height: 1.5rem;
   display: none;
   align-items: center; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .hamburger-menu {
       display: flex;
       margin-left: 1.25rem; } }
