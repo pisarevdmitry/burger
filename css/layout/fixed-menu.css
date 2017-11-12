@@ -1,19 +1,24 @@
 .fixed-menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  left: -9999px;
   margin: 0;
   flex-direction: column;
   align-items: center;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
   background: rgba(47, 50, 52, 0.99);
   z-index: 1000;
   padding-top: rem(130);
-  list-style-type: none; }
+  list-style-type: none;
+  transition: all 1.5s; }
   .fixed-menu_active {
-    display: flex; }
+    opacity: 1;
+    visibility: visible;
+    left: 0; }
 
 .fixed-menu__item {
   font: normal rem(24)/rem(40) Ubuntu-Regular;
@@ -46,7 +51,7 @@
   padding-top: rem(7);
   position: fixed;
   z-index: 1001;
-  top: rem(45);
+  top: rem(36);
   right: 0;
   margin-right: rem(20);
   margin-left: 0; }

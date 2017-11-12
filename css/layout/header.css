@@ -4,7 +4,8 @@
   justify-content: flex-end;
   width: 100%;
   align-items: center;
-  padding-top: 2vh; }
+  padding-top: 2vh;
+  min-height: 80px; }
   @media (max-width: 768px) {
     .header {
       justify-content: flex-start; } }
