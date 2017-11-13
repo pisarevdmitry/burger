@@ -35,16 +35,18 @@
   height: 100%;
   padding: 0;
   display: flex;
-
+  cursor: pointer;
   &_active .menu-accordion__decription {
-    width: 500px;
+    max-width: 500px;
     padding: rem(60) rem(30);
+    @include tablet{
+      width: 90%;
+      max-width: 90%;
+    }
     @include mobile {
-      width: 80%;
-      position: absolute;
-      right: 0;
-      z-index: 2;
-      height: 100%;
+       padding: 10px;
+
+
     }
   }
 
@@ -56,6 +58,9 @@
   background-position: center bottom;
   position: relative;
   width: 80px;
+  @include mobile{
+    width: 60px;
+  }
 
  }
 .menu-accordion__title{
@@ -77,8 +82,9 @@
 .menu-accordion__decription{
   font: 300 rem(14)/rem(24) Ubuntu-Light;
   color:white;
-  width: 0;
+  max-width: 0;
   overflow: hidden;
   background: rgba(47,50,52,.93);
   padding: 0;
+  transition: max-width 1s linear;
 }
