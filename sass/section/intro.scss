@@ -38,6 +38,7 @@
   height: 424px;
   padding-bottom: rem(138);
   padding-left: rem(20);
+  flex: 1;
   @include tablet{
     background-size: contain;
     width:351px ;
@@ -55,6 +56,7 @@
 .intro__preview-picture{
   align-self: center;
   width: 100%;
+  flex: 1;
 }
 .intro__preview-text{
   display: flex;
@@ -86,6 +88,8 @@
   height: rem(24);
   display: none;
   align-items: center;
+  position: relative;
+  z-index: 1001;
   @include tablet{
     display:flex;
     margin-left:rem(20) ;
@@ -98,5 +102,13 @@
   background: white;
   border-radius:rem(10) ;
   box-shadow: 0 9px  white, 0 -9px white ;
+  transition: all 1.5s;
+}
+.intro__arrow{
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
