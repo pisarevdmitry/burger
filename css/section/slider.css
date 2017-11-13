@@ -71,14 +71,15 @@
 .slider__text {
   font: 300 0.875rem/1.5rem Ubuntu-Light;
   color: white;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 2.5rem; }
 
 .slider__price {
   font: bold 1.875rem/1.75rem Gagalin-Regular;
   color: #e35028;
   text-transform: uppercase;
   margin-right: 1.5625rem;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 3.125rem; }
 
 .slider__number {
   font-size: 4.5rem; }

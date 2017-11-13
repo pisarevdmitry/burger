@@ -77,7 +77,7 @@
 .slider__text{
     font: 300 rem(14)/rem(24) Ubuntu-Light;
     color: white;
-    margin-bottom: rem(56);
+    margin-bottom: rem(40);
 }
 .slider__price{
     font: bold rem(30)/rem(28) Gagalin-Regular;
@@ -85,6 +85,7 @@
     text-transform: uppercase;
     margin-right: rem(25);
     display: inline-block;
+    line-height: rem(50);
 }
 .slider__number{
     font-size: rem(72);

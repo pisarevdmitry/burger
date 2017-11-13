@@ -57,12 +57,19 @@
   }
   &_active .team-accordion__title{
     color: #f9b43b;
+
     &:before{
       transform: rotate(180deg);
       }
     }
   &_active .team-accordion__decription{
-    height: auto;
+    max-height: 100px;
+    @include tablet{
+
+      max-height: 200px;
+    }
+
+
   }
   }
 
@@ -72,6 +79,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -89,14 +97,16 @@
 .team-accordion__decription{
   display: flex;
   flex-flow: row nowrap;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   margin-top: rem(14);
   margin-left: rem(8);
   margin-bottom: rem(25);
-  @include tablet{
+  transition: all .5s linear;
+   @include tablet{
     flex-direction: column;
     align-items: center;
+     transition: all 1s linear;
   }
 }
 .team__image{

@@ -33,7 +33,8 @@
   width: 451px;
   height: 424px;
   padding-bottom: 8.625rem;
-  padding-left: 1.25rem; }
+  padding-left: 1.25rem;
+  flex: 1; }
   @media (max-width: 768px) {
     .intro__preview-image {
       background-size: contain;
@@ -50,7 +51,8 @@
 
 .intro__preview-picture {
   align-self: center;
-  width: 100%; }
+  width: 100%;
+  flex: 1; }
 
 .intro__preview-text {
   display: flex;
@@ -81,7 +83,9 @@
 .hamburger-menu {
   height: 1.5rem;
   display: none;
-  align-items: center; }
+  align-items: center;
+  position: relative;
+  z-index: 1001; }
   @media (max-width: 768px) {
     .hamburger-menu {
       display: flex;

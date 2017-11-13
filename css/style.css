@@ -440,7 +440,8 @@ template {
   width: 451px;
   height: 424px;
   padding-bottom: 8.625rem;
-  padding-left: 1.25rem; }
+  padding-left: 1.25rem;
+  flex: 1; }
   @media (max-width: 768px) {
     .intro__preview-image {
       background-size: contain;
@@ -457,7 +458,8 @@ template {
 
 .intro__preview-picture {
   align-self: center;
-  width: 100%; }
+  width: 100%;
+  flex: 1; }
 
 .intro__preview-text {
   display: flex;
@@ -488,7 +490,9 @@ template {
 .hamburger-menu {
   height: 1.5rem;
   display: none;
-  align-items: center; }
+  align-items: center;
+  position: relative;
+  z-index: 1001; }
   @media (max-width: 768px) {
     .hamburger-menu {
       display: flex;
@@ -534,7 +538,9 @@ template {
 .header__logo {
   margin-right: auto;
   width: 93px;
-  height: 68px; }
+  height: 68px;
+  position: relative;
+  z-index: 1001; }
   @media (max-width: 768px) {
     .header__logo {
       margin-right: auto; } }
@@ -548,14 +554,6 @@ template {
 .logo__image {
   width: 100%;
   height: 100%; }
-
-.logo_fixed {
-  position: fixed;
-  width: 93px;
-  height: 68px;
-  z-index: 1001;
-  top: 0.875rem;
-  left: 1.25rem; }
 
 .nav {
   font: 500 0.8125rem Ubuntu-Medium;
@@ -654,16 +652,6 @@ template {
 .fixed-menu__link {
   color: inherit;
   text-decoration: none; }
-
-.close-menu {
-  display: flex;
-  padding-top: 0.4375rem;
-  position: fixed;
-  z-index: 1001;
-  top: 2.25rem;
-  right: 0;
-  margin-right: 1.25rem;
-  margin-left: 0; }
 
 .close-menu_bars {
   box-shadow: none;
@@ -831,14 +819,15 @@ template {
 .slider__text {
   font: 300 0.875rem/1.5rem Ubuntu-Light;
   color: white;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 2.5rem; }
 
 .slider__price {
   font: bold 1.875rem/1.75rem Gagalin-Regular;
   color: #e35028;
   text-transform: uppercase;
   margin-right: 1.5625rem;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 3.125rem; }
 
 .slider__number {
   font-size: 4.5rem; }
@@ -1116,14 +1105,18 @@ template {
     .team-accordion__item_active .team-accordion__title:before {
       transform: rotate(180deg); }
   .team-accordion__item_active .team-accordion__decription {
-    height: auto; }
+    max-height: 100px; }
+    @media (max-width: 768px) {
+      .team-accordion__item_active .team-accordion__decription {
+        max-height: 200px; } }
 
 .team-accordion__title {
   font: 0.75rem Gagalin-Regular;
   color: white;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .team-accordion__title:before {
     content: "";
     width: 0;
@@ -1139,15 +1132,17 @@ template {
 .team-accordion__decription {
   display: flex;
   flex-flow: row nowrap;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   margin-top: 0.875rem;
   margin-left: 0.5rem;
-  margin-bottom: 1.5625rem; }
+  margin-bottom: 1.5625rem;
+  transition: all .5s linear; }
   @media (max-width: 768px) {
     .team-accordion__decription {
       flex-direction: column;
-      align-items: center; } }
+      align-items: center;
+      transition: all 1s linear; } }
 
 .team__image {
   flex: 0 0 100px;
@@ -1212,13 +1207,13 @@ template {
   .menu-accordion__item_active .menu-accordion__decription {
     width: 500px;
     padding: 3.75rem 1.875rem; }
+    @media (max-width: 768px) {
+      .menu-accordion__item_active .menu-accordion__decription {
+        width: 400px; } }
     @media (max-width: 480px) {
       .menu-accordion__item_active .menu-accordion__decription {
-        width: 80%;
-        position: absolute;
-        right: 0;
-        z-index: 2;
-        height: 100%; } }
+        width: 200px;
+        padding: 10px; } }
 
 .menu-accordion__link {
   display: block;
@@ -1227,6 +1222,9 @@ template {
   background-position: center bottom;
   position: relative;
   width: 80px; }
+  @media (max-width: 480px) {
+    .menu-accordion__link {
+      width: 60px; } }
 
 .menu-accordion__title {
   display: inline-block;
