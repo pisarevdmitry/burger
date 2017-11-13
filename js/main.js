@@ -32,4 +32,17 @@ for(let i=0;i<teamAccord.length;i++){
             this.classList.remove("team-accordion__item_active")
         }
     })
-};
+}
+for(let i=0;i<menuAccord.length;i++){
+    menuAccord[i].addEventListener("click",function(){
+        if(!(this.classList.contains('menu-accordion__item_active'))) {
+            for(let i =0;i<menuAccord.length;i++ ) {
+                menuAccord[i].classList.remove("menu-accordion__item_active");
+            }
+            this.classList.add("menu-accordion__item_active")
+        }
+        else{
+            this.classList.remove("menu-accordion__item_active")
+        }
+    })
+}
