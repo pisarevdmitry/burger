@@ -78,7 +78,11 @@
     border: 8px solid transparent;
     border-top-color: #f9b43b;
     border-bottom-width: 0;
-    margin-right: 0.3125rem; }
+    margin-right: 0.3125rem;
+    transition: transform .5s linear; }
+    @media (max-width: 768px) {
+      .team-accordion__title:before {
+        transition: transform 1s linear; } }
   @media (max-width: 768px) {
     .team-accordion__title {
       font-size: 1.5625rem; } }

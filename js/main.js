@@ -1,8 +1,8 @@
 let triggerMenu = document.getElementById("trigger-menu");
 let menu = document.getElementById("fixed-menu");
 let bars = document.getElementById("hamburger-menu-bars");
-let teamAccord = $('.team-accordion__item');
-
+let teamAccord = document.getElementsByClassName('team-accordion__item');
+let menuAccord = document.getElementsByClassName('menu-accordion__item');
 
  triggerMenu.addEventListener('click',function() {
      if(menu.classList.contains("fixed-menu_active")){
@@ -32,4 +32,4 @@ for(let i=0;i<teamAccord.length;i++){
             this.classList.remove("team-accordion__item_active")
         }
     })
-}
+};
