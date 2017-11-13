@@ -59,14 +59,18 @@
     .team-accordion__item_active .team-accordion__title:before {
       transform: rotate(180deg); }
   .team-accordion__item_active .team-accordion__decription {
-    height: auto; }
+    max-height: 100px; }
+    @media (max-width: 768px) {
+      .team-accordion__item_active .team-accordion__decription {
+        max-height: 200px; } }
 
 .team-accordion__title {
   font: 0.75rem Gagalin-Regular;
   color: white;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .team-accordion__title:before {
     content: "";
     width: 0;
@@ -82,15 +86,17 @@
 .team-accordion__decription {
   display: flex;
   flex-flow: row nowrap;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   margin-top: 0.875rem;
   margin-left: 0.5rem;
-  margin-bottom: 1.5625rem; }
+  margin-bottom: 1.5625rem;
+  transition: all .5s linear; }
   @media (max-width: 768px) {
     .team-accordion__decription {
       flex-direction: column;
-      align-items: center; } }
+      align-items: center;
+      transition: all 1s linear; } }
 
 .team__image {
   flex: 0 0 100px;
