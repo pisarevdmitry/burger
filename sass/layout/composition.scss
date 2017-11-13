@@ -1,0 +1,75 @@
+@import "../mixins";
+.composition{
+  position: absolute;
+  top: rem(-55);
+  left: rem(22);
+  width: rem(90);
+  height: rem(90);
+  border-radius: rem(7);
+  background: #f08c33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover{
+    background: #e35028;
+    @include tablet{
+      background:#f08c33;
+    }
+  }
+  &:hover .composition-table{
+    display: block;
+    @include tablet{
+      display: none;
+    }
+  }
+  @include tablet{
+  top: rem(-32);
+  left: rem(-13)
+}
+}
+.composition__image{
+  width: rem(46);
+  height: rem(44);
+  margin-bottom: rem(4);
+}
+.composition__text{
+  font: bold rem(14) Gagalin-Regular;
+  text-transform: uppercase;
+  color: white;
+}
+.composition-table{
+  margin: 0;
+  padding: rem(20);
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left:rem(90);
+  background: rgba(255,255,255,.9);
+  border-radius: rem(7);
+  display: none;
+}
+.composition-table__item{
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(15);
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.composition__icon{
+  width: rem(48);
+  height: rem(43);
+  margin-right: rem(20);
+}
+.composition__product{
+  font: normal rem(14) Ubuntu-Medium;
+  margin-right: rem(60);
+}
+.composition__quantity{
+  flex: 1;
+  font: 300 rem(14) Ubuntu-Light;
+  white-space: nowrap;
+  text-align: right;
+  }

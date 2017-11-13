@@ -1,0 +1,90 @@
+@import "../mixins";
+.menu{
+  background: url("../img/jpg/menu.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding-top: rem(60);
+
+
+}
+.menu__header{
+  font: bold rem(72) Gagalin-Regular;
+  margin: 0;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: rem(6);
+
+}
+.menu-accordion{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  @include mobile{
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+}
+.menu-accordion__item {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  cursor: pointer;
+  &_active .menu-accordion__decription {
+    max-width: 500px;
+    padding: rem(60) rem(30);
+    @include tablet{
+      width: 90%;
+      max-width: 90%;
+    }
+    @include mobile {
+       padding: 10px;
+
+
+    }
+  }
+
+}
+.menu-accordion__link{
+  display: block;
+  height: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  width: 80px;
+  @include mobile{
+    width: 60px;
+  }
+
+ }
+.menu-accordion__title{
+  display: inline-block;
+  font: bold rem(40) Gagalin-Regular;
+  color: white;
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 0;
+  transform: rotate(-90deg) translateY(-192%);
+  &_veg{
+    line-height: rem(56);
+  }
+  &_diet{
+    line-height: rem(43);
+  }
+}
+.menu-accordion__decription{
+  font: 300 rem(14)/rem(24) Ubuntu-Light;
+  color:white;
+  max-width: 0;
+  overflow: hidden;
+  background: rgba(47,50,52,.93);
+  padding: 0;
+  transition: max-width 1s linear;
+}
