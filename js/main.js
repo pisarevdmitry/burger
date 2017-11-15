@@ -3,6 +3,7 @@ let menu = document.getElementById("fixed-menu");
 let bars = document.getElementById("hamburger-menu-bars");
 let teamAccord = document.getElementsByClassName('team-accordion__item');
 let menuAccord = document.getElementsByClassName('menu-accordion__item');
+let $fon = $(".modal__overlay");
 
  triggerMenu.addEventListener('click',function() {
      if(menu.classList.contains("fixed-menu_active")){
@@ -45,4 +46,24 @@ for(let i=0;i<menuAccord.length;i++){
             this.classList.remove("menu-accordion__item_active")
         }
     })
-}
+};
+$(".reviews__link").on("click",(e) =>{
+    $this = $(e.currentTarget);
+    e.preventDefault();
+    $this.parent().css({
+      "opacity":1,
+      "visibility":"visible"
+    });
+    $fon.fadeIn(1000,()=>{
+        $this.parent().next().fadeIn(1000)
+    })
+});
+$(".modal__close-button").on("click",(e)=>{
+    $this = $(e.currentTarget);
+    e.preventDefault();
+    $this.parent().fadeOut(1000,()=>{
+        $fon.fadeOut(1000, ()=>{
+            $this.parent().prev().attr('style',"");
+        });
+    });
+ })

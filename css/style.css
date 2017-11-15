@@ -962,8 +962,7 @@ template {
 .reviews__item {
   flex: 1 0 25%;
   height: 50%;
-  position: relative;
-  filter: grayscale(100); }
+  position: relative; }
   @media (max-width: 768px) {
     .reviews__item {
       flex-basis: 50%;
@@ -988,7 +987,8 @@ template {
   padding: 2.8125rem 1.8125rem;
   background: rgba(20, 20, 20, 0.6);
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  transition: opacity .5s linear; }
   @media (max-width: 768px) {
     .reviews__overlay {
       padding: 1.25rem 1.25rem;
@@ -1001,10 +1001,14 @@ template {
   font: 0.875rem Gagalin-Regular;
   color: white;
   margin-bottom: 0.9375rem; }
+  .reviews__name_modal {
+    color: black; }
 
 .reviews__text {
   font: 300 0.875rem/1.5rem Ubuntu-Light;
   color: white; }
+  .reviews__text_modal {
+    color: black; }
   @media (max-width: 768px) {
     .reviews__text {
       margin-top: 0.125rem;
@@ -1013,6 +1017,43 @@ template {
 
 .reviews__link:hover {
   background: #1f2122; }
+
+.reviews__modal {
+  position: fixed;
+  z-index: 1110;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  padding: 1.25rem;
+  display: none; }
+
+.modal {
+  width: 480px;
+  background: white; }
+
+.modal__close-button {
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1110;
+  top: 10px;
+  right: 20px; }
+
+.modal__close-button-bars {
+  width: 1.5rem;
+  height: 0.25rem;
+  transform: rotate(45deg);
+  background: #ed886d; }
+  .modal__close-button-bars:after {
+    content: '';
+    width: 1.5rem;
+    height: 0.25rem;
+    position: absolute;
+    background: #ed886d;
+    border-radius: 0.625rem;
+    transform: rotate(-90deg); }
 
 .controls {
   position: fixed;
@@ -1551,3 +1592,13 @@ html {
   @media (max-width: 480px) {
     html {
       font-size: 13px; } }
+
+.modal__overlay {
+  background: rgba(47, 50, 52, 0.92);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  display: none; }
