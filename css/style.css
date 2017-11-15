@@ -993,9 +993,6 @@ template {
     .reviews__overlay {
       padding: 1.25rem 1.25rem;
       text-align: center; } }
-  @media (max-width: 480px) {
-    .reviews__overlay {
-      display: none; } }
 
 .reviews__name {
   font: 0.875rem Gagalin-Regular;
@@ -1003,17 +1000,36 @@ template {
   margin-bottom: 0.9375rem; }
   .reviews__name_modal {
     color: black; }
+    @media (max-width: 768px) {
+      .reviews__name_modal {
+        font-size: 0.9375rem;
+        line-height: 1.125rem; } }
 
 .reviews__text {
   font: 300 0.875rem/1.5rem Ubuntu-Light;
   color: white; }
-  .reviews__text_modal {
-    color: black; }
   @media (max-width: 768px) {
     .reviews__text {
       margin-top: 0.125rem;
       margin-bottom: 0.4375rem;
       line-height: 1.125rem; } }
+  @media (max-width: 480px) {
+    .reviews__text {
+      display: none; } }
+  .reviews__text_modal {
+    color: black; }
+    @media (max-width: 768px) {
+      .reviews__text_modal {
+        font-size: 0.9375rem;
+        line-height: 1.125rem; } }
+    @media (max-width: 480px) {
+      .reviews__text_modal {
+        display: block; } }
+
+@media (max-width: 480px) {
+  .reviews__link {
+    display: block;
+    margin-top: 2.5rem; } }
 
 .reviews__link:hover {
   background: #1f2122; }
@@ -1026,10 +1042,13 @@ template {
   transform: translate(-50%, -50%);
   border-radius: 7px;
   padding: 1.25rem;
-  display: none; }
+  display: none;
+  width: 480px; }
+  @media (max-width: 480px) {
+    .reviews__modal {
+      width: 95%; } }
 
 .modal {
-  width: 480px;
   background: white; }
 
 .modal__close-button {
