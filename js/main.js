@@ -69,7 +69,7 @@ $(".modal__close-button").on("click",(e)=>{
  });
 let slider = new Swiper ('.swiper-container', {
     loop:true,
-    speed:1000,
+    speed:300,
     navigation: {
         nextEl: '.slider__arrow_right',
         prevEl: '.slider__arrow_left',
@@ -84,3 +84,6 @@ $("#fullpage").fullpage({
     scrollingSpeed: 1000,
     easing: "swing"
 });
+$(".intro__arrow").on("click",() =>{
+    $.fn.fullpage.moveSectionDown();
+})
