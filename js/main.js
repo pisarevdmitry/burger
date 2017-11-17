@@ -48,7 +48,7 @@ for(let i=0;i<menuAccord.length;i++){
     })
 };
 $(".reviews__link").on("click",(e) =>{
-    $this = $(e.currentTarget);
+   let $this = $(e.currentTarget);
     e.preventDefault();
     $this.parent().css({
       "opacity":1,
@@ -59,11 +59,28 @@ $(".reviews__link").on("click",(e) =>{
     })
 });
 $(".modal__close-button").on("click",(e)=>{
-    $this = $(e.currentTarget);
+  let  $this = $(e.currentTarget);
     e.preventDefault();
     $this.parent().fadeOut(1000,()=>{
         $fon.fadeOut(1000, ()=>{
             $this.parent().prev().attr('style',"");
         });
     });
- })
+ });
+let slider = new Swiper ('.swiper-container', {
+    loop:true,
+    speed:1000,
+    navigation: {
+        nextEl: '.slider__arrow_right',
+        prevEl: '.slider__arrow_left',
+    }
+
+});
+$("#fullpage").fullpage({
+    verticalCentered:false,
+    menu:"#page-controls",
+    anchors:["intro","advantages","slider","section-team","menu","reviews","form","section-map"],
+    css3: false,
+    scrollingSpeed: 1000,
+    easing: "swing"
+});
