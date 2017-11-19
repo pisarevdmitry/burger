@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
     <title>Mr.Burger</title>
-    <link href="css/jquery.fullpage.min.css">
+    <link href="css/jquery.fullpage.min.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -25,14 +25,14 @@
                             <img class="logo__image" src="img/svg/logo.svg" alt="logo">
                         </div>
                         <ul class="nav ">
-                            <li class="nav__item "><a class="nav__link"> о нас</a></li>
-                            <li class="nav__item "><a href="#" class="nav__link">бургеры</a></li>
-                            <li class="nav__item "><a href="#" class="nav__link">команда</a></li>
-                            <li class="nav__item "><a href="#" class="nav__link">меню</a></li>
-                            <li class="nav__item "><a href="#" class="nav__link">отзывы</a></li>
-                            <li class="nav__item "><a href="#" class="nav__link">контакты</a></li>
+                            <li class="nav__item "><a href="#advantages" class="nav__link"> о нас</a></li>
+                            <li class="nav__item "><a href="#slider" class="nav__link">бургеры</a></li>
+                            <li class="nav__item "><a href="#section-team" class="nav__link">команда</a></li>
+                            <li class="nav__item "><a href="#menu" class="nav__link">меню</a></li>
+                            <li class="nav__item "><a href="#reviews" class="nav__link">отзывы</a></li>
+                            <li class="nav__item "><a href="#section-map" class="nav__link">контакты</a></li>
                         </ul>
-                        <a class="btn btn_red" href="#">Заказать</a>
+                        <a class="btn btn_red" href="#form">Заказать</a>
                         <a href="#" class="hamburger-menu triger-menu " id="trigger-menu">
                             <div class="hamburger-menu-bars " id="hamburger-menu-bars"></div>
                         </a>
@@ -170,6 +170,9 @@
                                                     <span class="composition__product">Сыр</span>
                                                     <span class="composition__quantity">80 г</span>
                                                 </li>
+                                                <li  class=" composition__close ">
+                                                    <div class="modal__close-button-bars " ></div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -243,6 +246,9 @@
                                                     </svg>
                                                     <span class="composition__product">Сыр</span>
                                                     <span class="composition__quantity">80 г</span>
+                                                </li>
+                                                <li class="modal__close-button ">
+                                                    <div class="modal__close-button-bars " ></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -402,7 +408,7 @@
                             <span class="reviews__name">Константин спилберг</span>
                             <p class="reviews__text">
                                 Мысли все о них и о них,о них и о них.Нельзя устоять,невозможно забыть... Никогда
-                                не думал,что булочки могут быть такими мягкими,котлета сочной, а сыр расплавленным.
+                            не думал,что булочки могут быть такими мягкими,котлета сочной, а сыр расплавленным.
                             </p>
                             <a class="btn btn_gray reviews__link" href="#">Подробнее</a>
 
@@ -721,13 +727,13 @@
                       </div>
                    </footer>
                </section>
-            <ul class="fixed-menu "id="fixed-menu" >
-                    <li class="fixed-menu__item "><a class="fixed-menu__link"> почему мы</a></li>
-                    <li class="fixed-menu__item"><a href="#" class="fixed-menu__link">меню</a></li>
-                    <li class="fixed-menu__item "><a href="#" class="fixed-menu__link">советы</a></li>
-                    <li class="fixed-menu__item"><a href="#" class="fixed-menu__link">кто мы</a></li>
-                    <li class="fixed-menu__item "><a href="#" class="fixed-menu__link">свяжитесь с нами</a></li>
-                    <li class="fixed-menu__item "><a href="#" class="fixed-menu__link">контакты</a></li>
+            <ul class="fixed-menu" id="fixed-menu" >
+                    <li class="fixed-menu__item "><a href="#advantages" class="fixed-menu__link"> почему мы</a></li>
+                    <li class="fixed-menu__item"><a href="#slider" class="fixed-menu__link">меню</a></li>
+                    <li class="fixed-menu__item "><a href="#reviews" class="fixed-menu__link">советы</a></li>
+                    <li class="fixed-menu__item"><a href="#section-team" class="fixed-menu__link">кто мы</a></li>
+                    <li class="fixed-menu__item "><a href="#form" class="fixed-menu__link">свяжитесь с нами</a></li>
+                    <li class="fixed-menu__item "><a href="#section-map" class="fixed-menu__link">контакты</a></li>
             </ul>
             <div class="modal__overlay"></div>
             <ul class="controls" id="page-controls">
@@ -740,18 +746,7 @@
                 <li class="controls__item"  data-menuanchor ="form"><a class="controls__link" href="#form"></a></li>
                 <li class="controls__item"  data-menuanchor ="section-map"><a class="controls__link" href="#section-map"></a></li>
             </ul>
-            <div class ="reviews__modal modal">
-                <span class="reviews__name reviews__name_modal">Константин спилберг</span>
-                <p class="reviews__text reviews__text_modal">
-                    Мысли все о них и о них,о них и о них.Нельзя устоять,невозможно забыть... Никогда
-                    не думал,что булочки могут быть такими мягкими,котлета сочной, а сыр расплавленным.
-                    Мысли все о них и о них,о них и о них.Нельзя устоять,невозможно забыть... Никогда
-                    не думал,что булочки могут быть такими мягкими,котлета сочной, а сыр расплавленным.
-                </p>
-                <a href="#" class="modal__close-button ">
-                    <div class="modal__close-button-bars " ></div>
-                </a>
-            </div>
+
         </div>
 
     </div>
