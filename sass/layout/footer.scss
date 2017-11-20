@@ -1,0 +1,22 @@
+@import "../mixins";
+.footer{
+  position: absolute;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 0;
+  background: url("../img/jpg/texture.jpg");
+  z-index: 1;
+}
+.footer__conteiner{
+  display: flex;
+  height: 100%;
+  @include mobile{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.footer__column{
+  flex:1 0 0
+}
+

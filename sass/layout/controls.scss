@@ -1,0 +1,44 @@
+.controls{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top:13vh;
+  right: 4%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 900;
+}
+.controls__item{
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+  &:hover{
+    border: 1px solid white;
+  }
+}
+
+.controls__link{
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative;
+    &:after{
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+
+}
+.controls__item.active{
+  border: 1px solid white;
+
+}
