@@ -1514,11 +1514,7 @@ input[type="reset"] {
 
 .section-map {
   min-height: 650px;
-  height: 100vh;
-  background: url("../img/jpg/map.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: relative; }
+  height: 100vh; }
 
 .footer {
   position: absolute;
@@ -1526,7 +1522,8 @@ input[type="reset"] {
   padding-top: 10px;
   padding-bottom: 10px;
   bottom: 0;
-  background: url("../img/jpg/texture.jpg"); }
+  background: url("../img/jpg/texture.jpg");
+  z-index: 1; }
 
 .footer__conteiner {
   display: flex;
