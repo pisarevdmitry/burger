@@ -1,7 +1,2 @@
 .section-map {
-  min-height: 650px;
-  height: 100vh;
-  background: url("../img/jpg/map.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: relative; }
+  height: 100vh; }

@@ -10,11 +10,19 @@
   z-index: 900; }
 
 .controls__item {
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 5px; }
+  .controls__item:hover {
+    border: 1px solid white; }
+
+.controls__link {
+  display: block;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   position: relative; }
-  .controls__item:after {
+  .controls__link:after {
     content: "";
     width: 6px;
     height: 6px;
@@ -24,6 +32,6 @@
     margin-left: 50%;
     margin-top: 50%;
     transform: translate(-50%, -50%); }
-  .controls__item:hover {
-    border: 1px solid white;
-    cursor: pointer; }
+
+.controls__item.active {
+  border: 1px solid white; }

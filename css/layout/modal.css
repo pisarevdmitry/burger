@@ -1,0 +1,25 @@
+.modal {
+  background: white; }
+
+.modal__close-button {
+  height: rem(24);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1110;
+  top: 10px;
+  right: 20px; }
+
+.modal__close-button-bars {
+  width: rem(24);
+  height: rem(4);
+  transform: rotate(45deg);
+  background: #ed886d; }
+  .modal__close-button-bars:after {
+    content: '';
+    width: rem(24);
+    height: rem(4);
+    position: absolute;
+    background: #ed886d;
+    border-radius: rem(10);
+    transform: rotate(-90deg); }

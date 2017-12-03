@@ -13,6 +13,7 @@
 @import "section/slider";
 @import "layout/composition";
 @import "section/reviews";
+@import "layout/modal";
 @import "layout/controls";
 @import "section/team";
 @import "section/menu";
@@ -43,8 +44,8 @@ body{
   }
 }
 .section{
-  min-height: 650px;
   height: 100vh;
+  min-height: 650px;
 
 }
 @media(max-width: 1100px){
@@ -62,3 +63,14 @@ html{
     font-size: 13px;
   }
 }
+.modal__overlay{
+  background: rgba(47,50,52,.92);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  display: none;
+}
+
