@@ -62,6 +62,7 @@
   border: 2px solid transparent;
   border-radius: 6px;
   width: 100%;
+  padding-left: 15px;
   &:focus{
     border: 2px solid #f9b43b;
     outline: none;
@@ -73,6 +74,7 @@
   border-radius: 6px;
   resize: none;
   width: 100%;
+  padding: 10px;
   &:focus{
     border: 2px solid #f9b43b;
     outline: none;
@@ -182,7 +184,25 @@ input[type="reset"]{
     justify-content: center;
   }
 }
-
+.form__modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 195px;
+  min-height: 105px;
+  background: white;
+  border-radius: 7px;
+  text-align: center;
+  padding: 22px 18px;
+  font: 300 rem(14) Ubuntu-Light;
+  display:none;
+}
+.form__close-button{
+  margin-top: 6px;
+  display: inline-block;
+  cursor: pointer;
+}
 
 
 

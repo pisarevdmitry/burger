@@ -1,7 +1,7 @@
 @import "../mixins";
 .composition{
   position: absolute;
-  top: rem(-55);
+  top: 0;
   left: rem(22);
   width: rem(90);
   height: rem(90);
@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background .5s;
   &:hover{
     background: #e35028;
     @include tablet{
@@ -25,8 +26,7 @@
     }
   }
   @include tablet{
-  top: rem(-32);
-  left: rem(-13)
+  left: 0
 }
 }
 .composition__image{
@@ -66,10 +66,30 @@
 .composition__product{
   font: normal rem(14) Ubuntu-Medium;
   margin-right: rem(60);
+  @include mobile{
+    margin-right: rem(30);
+  }
 }
+
 .composition__quantity{
   flex: 1;
   font: 300 rem(14) Ubuntu-Light;
   white-space: nowrap;
   text-align: right;
+  margin-right: rem(60);
+  @include mobile{
+    margin-right: rem(30);
   }
+  }
+.composition__close{
+  height: rem(24);
+  align-items: center;
+  position:absolute;
+  z-index: 1110;
+  top: 17px;
+  right: 20px;
+  display: none;
+  @include tablet{
+  display: block;
+  }
+}

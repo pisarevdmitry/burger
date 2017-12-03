@@ -38,13 +38,13 @@
   cursor: pointer;
   &_active .menu-accordion__decription {
     max-width: 500px;
-    padding: rem(60) rem(30);
+    padding: 0;
     @include tablet{
-      width: 90%;
-      max-width: 90%;
+      max-width: 230px;
     }
     @include mobile {
-       padding: 10px;
+      max-width: 130px;
+
 
 
     }
@@ -85,6 +85,23 @@
   max-width: 0;
   overflow: hidden;
   background: rgba(47,50,52,.93);
-  padding: 0;
-  transition: max-width 1s linear;
+  padding:0;
+  transition:max-width .5s linear;
+  @include mobile{
+    transition: max-width .5s linear
+
+  }
+}
+.menu-accordion__text{
+  margin:  rem(60) rem(30);
+  width: 450px;
+  @include tablet{
+   width: 200px;
+  }
+  @include mobile{
+    width: 100px;
+    font-size: rem(11);
+    line-height: rem(20);
+    margin-top: rem(10);
+  }
 }
