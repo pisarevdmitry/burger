@@ -1,5 +1,4 @@
 .intro {
-  min-height: 650px;
   height: 100vh;
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
   background-size: auto, cover;

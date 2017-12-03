@@ -66,13 +66,20 @@
 .composition__product{
   font: normal rem(14) Ubuntu-Medium;
   margin-right: rem(60);
+  @include mobile{
+    margin-right: rem(30);
+  }
 }
+
 .composition__quantity{
   flex: 1;
   font: 300 rem(14) Ubuntu-Light;
   white-space: nowrap;
   text-align: right;
   margin-right: rem(60);
+  @include mobile{
+    margin-right: rem(30);
+  }
   }
 .composition__close{
   height: rem(24);

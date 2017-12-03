@@ -5,13 +5,30 @@ var teamAccord = document.getElementsByClassName('team-accordion');
 var menuAccord = document.getElementsByClassName('menu-accordion');
 var $fon = $(".modal__overlay");
 var $fixedMenuLink = $(".fixed-menu__item");
+function modalOpen(text){
+    $(".form__text").text(text);
+    $('#formModal').fadeIn(1000);
+    $("[type='submit']").prop("disabled",true)
+   }
+
+
 function openMenu() {
     menu.classList.add("fixed-menu_active");
     bars.classList.add("close-menu_bars");
+   stopScroll()
 }
 function closeMenu(){
     menu.classList.remove("fixed-menu_active");
     bars.classList.remove("close-menu_bars");
+    allowScroll()
+}
+function stopScroll(){
+    $.fn.fullpage.setAllowScrolling(false);
+    $.fn.fullpage.setKeyboardScrolling(false);
+}
+function allowScroll() {
+    $.fn.fullpage.setAllowScrolling(true);
+    $.fn.fullpage.setKeyboardScrolling(true);
 }
 function accord(container,target){
     var className= container.className;
@@ -29,13 +46,39 @@ function accord(container,target){
         }
     }
 }
+$("#form-delivery").on("submit",function (e) {
+    e.preventDefault();
+    var form = $(e.target);
+    var data = form.serialize();
+    var url = form.attr("action");
+    var request = $.ajax({
+        type: "POST",
+        url: url,
+        data: data
+    });
+    request.done(function(msg) {
+        modalOpen(msg)
 
+    });
+    request.fail(function(jqXHR,textStatus){
+        modalOpen("Ошибка сервера")
+    });
+});
+$(".form__close-button").on("click",function () {
+
+    $(this).closest("#formModal").fadeOut(1000);
+    $("[type='submit']").prop("disabled",false);
+    $(":reset").click()
+
+});
  triggerMenu.addEventListener('click',function() {
      if(menu.classList.contains("fixed-menu_active")) {
         closeMenu()
+
      }
      else {
          openMenu()
+
      }
 
 });
@@ -60,7 +103,8 @@ $(".reviews__link").on("click",function(e){
       "visibility":"visible"
     });
     $fon.fadeIn(1000,function(){
-        $this.parent().next().fadeIn(1000)
+        $this.parent().next().fadeIn(1000);
+        stopScroll()
     })
 });
 $(".modal__close-button").on("click",function(e){
@@ -69,13 +113,14 @@ $(".modal__close-button").on("click",function(e){
     $this.parent().fadeOut(1000,()=>{
         $fon.fadeOut(1000, ()=>{
             $this.parent().prev().attr('style',"");
+            allowScroll()
         });
     });
  });
 var slider = new Swiper ('.swiper-container', {
     loop:true,
     speed:300,
-    spaceBetween:20,
+    spaceBetween:85,
     navigation: {
         nextEl: '.slider__arrow_right',
         prevEl: '.slider__arrow_left',
@@ -89,6 +134,7 @@ $("#fullpage").fullpage({
     css3: false,
     scrollingSpeed: 1000,
     easing: "swing",
+    responsiveHeight: 649
     });
 $(".intro__arrow").on("click",function() {
     $.fn.fullpage.moveSectionDown();
@@ -149,3 +195,6 @@ myMap.geoObjects
     .add(myPlacemark3)
     .add(myPlacemark4);
 });
+$("#tel").mask("+7(999) 999-99-99");
+
+

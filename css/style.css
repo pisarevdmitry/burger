@@ -406,7 +406,6 @@ template {
   font-style: normal; }
 
 .intro {
-  min-height: 650px;
   height: 100vh;
   background: url("../img/png/texture.png"), url("../img/jpg/header.jpg") no-repeat;
   background-size: auto, cover;
@@ -668,7 +667,6 @@ template {
     transform: rotate(-90deg); }
 
 .advantages {
-  min-height: 650px;
   height: 100vh;
   background: url("../img/jpg/bg.jpg") no-repeat;
   background-size: cover;
@@ -936,6 +934,9 @@ template {
 .composition__product {
   font: normal 0.875rem Ubuntu-Medium;
   margin-right: 3.75rem; }
+  @media (max-width: 480px) {
+    .composition__product {
+      margin-right: 1.875rem; } }
 
 .composition__quantity {
   flex: 1;
@@ -943,6 +944,9 @@ template {
   white-space: nowrap;
   text-align: right;
   margin-right: 3.75rem; }
+  @media (max-width: 480px) {
+    .composition__quantity {
+      margin-right: 1.875rem; } }
 
 .composition__close {
   height: 1.5rem;
@@ -957,7 +961,6 @@ template {
       display: block; } }
 
 .reviews {
-  min-height: 650px;
   height: 100vh; }
 
 .reviews-list {
@@ -1403,7 +1406,8 @@ template {
   height: 35px;
   border: 2px solid transparent;
   border-radius: 6px;
-  width: 100%; }
+  width: 100%;
+  padding-left: 15px; }
   .form__input:focus {
     border: 2px solid #f9b43b;
     outline: none; }
@@ -1413,7 +1417,8 @@ template {
   border: 2px solid transparent;
   border-radius: 6px;
   resize: none;
-  width: 100%; }
+  width: 100%;
+  padding: 10px; }
   .form__textarea:focus {
     border: 2px solid #f9b43b;
     outline: none; }
@@ -1512,8 +1517,26 @@ input[type="reset"] {
     display: flex;
     justify-content: center; } }
 
+.form__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 195px;
+  min-height: 105px;
+  background: white;
+  border-radius: 7px;
+  text-align: center;
+  padding: 22px 18px;
+  font: 300 0.875rem Ubuntu-Light;
+  display: none; }
+
+.form__close-button {
+  margin-top: 6px;
+  display: inline-block;
+  cursor: pointer; }
+
 .section-map {
-  min-height: 650px;
   height: 100vh; }
 
 .footer {
@@ -1614,8 +1637,8 @@ body {
     display: flex; }
 
 .section {
-  min-height: 650px;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 650px; }
 
 html {
   font-size: 16px; }

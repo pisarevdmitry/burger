@@ -12,6 +12,7 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.easings.min.js"></script>
     <script src="js/jquery.fullpage.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     
 
@@ -596,40 +597,40 @@
             <section class="section form" data-anchor="form">
                     <div class="container">
                         <h1 class="form__header">Закажите доставку</h1>
-                        <form class="form-delivery" action="/" method="post">
+                        <form class="form-delivery" action="process.php" method="post" id="form-delivery" >
                             <div class="form__column form__column_tablet">
                                 <div class ="form__row">
                                     <div class="form__column" >
                                         <label class="form__label" for="name">Имя</label>
-                                        <input type="text" name="name" id="name" class="form__input">
+                                        <input type="text" name="name" id="name" class="form__input" required  placeholder="Дмитрий">
                                     </div>
                                     <div class="form__column" >
                                         <label class="form__label" for="tel">Телефон</label>
-                                        <input type="tel" name="tel" id="tel" class="form__input">
+                                        <input type="tel" name="tel" id="tel" class="form__input"  required placeholder="8(955) 345-78-42">
                                     </div>
                                 </div>
                                <div class="form__row">
                                    <div class="form__column" >
                                        <label class="form__label" for="Street">Улица</label>
-                                       <input type="text" name="Street" id="Street" class="form__input">
+                                       <input type="text" name="Street" id="Street" class="form__input" required placeholder="Бабушкина">
                                    </div>
                                </div>
                                 <div class="form__row">
                                     <div class="form__column" >
                                         <label class="form__label" for="House">Дом</label>
-                                        <input type="text" name="House" id="House" class="form__input">
+                                        <input type="text" name="House" id="House" class="form__input" required placeholder="12">
                                     </div>
                                     <div class="form__column" >
                                         <label class="form__label" for="Housing">Корпус</label>
-                                        <input type="text" name="Housing" id="Housing" class="form__input">
+                                        <input type="text" name="Housing" id="Housing" class="form__input" placeholder="2">
                                     </div>
                                     <div class="form__column form__column__mobile" >
                                         <label class="form__label" for="Apartment">Квартира</label>
-                                        <input type="text" name="Apartment" id="Apartment" class="form__input">
+                                        <input type="text" name="Apartment" id="Apartment" class="form__input" placeholder="102">
                                     </div>
                                     <div class="form__column form__column__disabled" >
                                         <label class="form__label" for="Floor">Этаж</label>
-                                        <input type="text" name="Floor" id="Floor" class="form__input">
+                                        <input type="text" name="Floor" id="Floor" class="form__input" placeholder="7">
                                     </div>
                                 </div>
 
@@ -638,13 +639,13 @@
                                 <div class="form__row">
                                     <div class="form__column" >
                                         <label class="form__label" for="comment">Комментарий</label>
-                                        <textarea name="comment" id="comment" class="form__textarea"></textarea>
+                                        <textarea name="comment" id="comment" class="form__textarea" placeholder="Напишите ваш комметарий."></textarea>
                                     </div>
                                 </div>
                                 <div class="form__row">
                                     <div class="form__column form__column_type_row form__column_centered">
                                         <div class="form__radio">
-                                            <input type="radio" name="radio" value="change" id="change">
+                                            <input type="radio" name="radio" value="change" id="change" checked>
                                             <label for="change" class="form__label form__label_type_radio">Потребуется сдача</label>
                                         </div>
                                         <div class="form__radio">
@@ -672,6 +673,10 @@
 
                             </div>
                         </form>
+                        <div class ="form__modal " id="formModal">
+                            <span class="form__text"></span>
+                            <a class="btn btn_red form__close-button ">Закрыть</a>
+                        </div>
                     </div>
                 </section>
             <section class="section-map section" data-anchor="section-map" id="map">

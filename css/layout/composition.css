@@ -62,6 +62,9 @@
 .composition__product {
   font: normal 0.875rem Ubuntu-Medium;
   margin-right: 3.75rem; }
+  @media (max-width: 480px) {
+    .composition__product {
+      margin-right: 1.875rem; } }
 
 .composition__quantity {
   flex: 1;
@@ -69,6 +72,9 @@
   white-space: nowrap;
   text-align: right;
   margin-right: 3.75rem; }
+  @media (max-width: 480px) {
+    .composition__quantity {
+      margin-right: 1.875rem; } }
 
 .composition__close {
   height: 1.5rem;
