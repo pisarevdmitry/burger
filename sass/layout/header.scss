@@ -1,0 +1,31 @@
+@import "../mixins";
+.header{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+  padding-top: 2vh;
+  min-height: 80px;
+  @include tablet{
+    justify-content: flex-start;
+  }
+}
+.header__logo{
+  margin-right: auto;
+  width: 93px;
+  height: 68px;
+  position: relative;
+  z-index: 1001;
+  @include tablet{
+    margin-right: auto;
+  }
+}
+.header__into-text{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin-left: rem(10);
+  }
+
+

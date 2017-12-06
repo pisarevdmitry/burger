@@ -1,0 +1,76 @@
+@import "variable";
+@import "mixins";
+@import "normalize";
+@import "font";
+@import "section/intro";
+@import "layout/arrow";
+@import "layout/header";
+@import "layout/logo";
+@import "layout/navigation";
+@import "layout/button";
+@import "layout/fixed-menu";
+@import "section/advantages";
+@import "section/slider";
+@import "layout/composition";
+@import "section/reviews";
+@import "layout/modal";
+@import "layout/controls";
+@import "section/team";
+@import "section/menu";
+@import "section/form";
+@import "section/map";
+@import "layout/footer";
+@import "layout/social";
+@import "layout/info";
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  line-height: 1.42;
+
+}
+.wrapper{
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 rem(20);
+  &_slider{
+    display: flex;
+  }
+}
+.section{
+  height: 100vh;
+  min-height: 650px;
+
+}
+@media(max-width: 1100px){
+ .container{
+
+
+ }
+ }
+html{
+  font-size: 16px;
+  @include tablet{
+    font-size: 14px;
+  }
+  @include mobile{
+    font-size: 13px;
+  }
+}
+.modal__overlay{
+  background: rgba(47,50,52,.92);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  display: none;
+}
+
